@@ -10,6 +10,9 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var picker: UIPickerView!
     
+    // test
+    
+    
     // Number of columns of data
       func numberOfComponents(in pickerView: UIPickerView) -> Int {
           return 1
