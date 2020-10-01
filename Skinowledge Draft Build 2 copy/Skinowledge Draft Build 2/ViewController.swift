@@ -5,7 +5,6 @@
 //  Created by Jessabelle Delen Ramos on 9/18/20.
 //
 
-//testing tanupa 
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
