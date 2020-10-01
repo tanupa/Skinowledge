@@ -256,6 +256,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sun Damage"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-2v-dnn">
+                                <rect key="frame" x="183" y="463" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <segue destination="Fia-OR-nmf" kind="show" id="dBv-sH-0BD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VCz-L5-NPp"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -265,22 +273,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5e-zs-nK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ayn-3r-rWq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="732" y="75"/>
+            <point key="canvasLocation" x="955" y="92"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UwV-k1-Uro">
             <objects>
                 <viewController id="Fia-OR-nmf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0fo-fG-OiE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ud-1D-cZn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Results" id="0Cv-9D-c9g"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0gh-ls-1pC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oLL-wI-743"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZF-jM-rRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2088" y="-4"/>
+            <point key="canvasLocation" x="2255" y="-98"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="X2O-0b-FQK">
