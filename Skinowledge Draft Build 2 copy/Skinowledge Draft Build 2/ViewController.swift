@@ -45,6 +45,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.picker.dataSource = self
         pickerData = ["Dry", "Oily", "Combination", "Sensitive"]
         // Do any additional setup after loading the view.
+
     }
     
     var iModel = Model()
@@ -53,6 +54,22 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var Male: UIButton!
     
     @IBOutlet weak var Female: UIButton!
+    
+    @IBOutlet weak var teensButton: UIButton!
+    
+    @IBOutlet weak var youngAdultsButton: UIButton!
+    
+    @IBOutlet weak var adultsButton: UIButton!
+    
+    @IBOutlet weak var dryButton: UIButton!
+    
+    @IBOutlet weak var oilButton: UIButton!
+    
+    @IBOutlet weak var combinationButton: UIButton!
+    
+    @IBOutlet weak var sensitiveButton: UIButton!
+    
+    @IBOutlet weak var submitButton: UIButton!
     
     @IBAction func updateGendertoMale(_ sender: UIButton) {
         
@@ -125,9 +142,171 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         print(iModel.subIssue)
         
     }
-}
+    
+    /**These funcs below will change the color of the button to green when pressed, and regular color when delesected
+     **/
+    @IBAction func buttonColorChange(_ sender: Any) {
+        
+        if !Male.isSelected {
+            Male.isSelected = true
+            Male.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            Male.backgroundColor = UIColor.green
+        }
+        else {
+            Male.isSelected = false
+            Male.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+            Male.backgroundColor = UIColor.systemBackground
+        }
+        //Male.tintColor = UIColor.green
+    }
+    
+    @IBAction func buttonColorChangeF(_ sender: Any) {
+        if !Female.isSelected {
+            Female.isSelected = true
+            Female.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            Female.backgroundColor = UIColor.green
+        }
+        else {
+            Female.isSelected = false
+            Female.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+            Female.backgroundColor = UIColor.systemBackground
+        }
+        //Female.tintColor = UIColor.green
+    }
+    
+    @IBAction func teenButtonAction(_ sender: Any) {
+        
+        if !teensButton.isSelected {
+            teensButton.isSelected = true
+            teensButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            teensButton.backgroundColor = UIColor.green
+        }
+        else {
+            teensButton.isSelected = false
+            teensButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+            teensButton.backgroundColor = UIColor.systemBackground
+        }
+    }
+    
+    @IBAction func youngAdultsButtonAction(_ sender: Any) {
+        
+        if !youngAdultsButton.isSelected {
+            youngAdultsButton.isSelected = true
+            youngAdultsButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            youngAdultsButton.backgroundColor = UIColor.green
+        }
+        else {
+            youngAdultsButton.isSelected = false
+            youngAdultsButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+            youngAdultsButton.backgroundColor = UIColor.systemBackground
+        }
+    }
+    
+    @IBAction func adultsButtonAction(_ sender: Any) {
+        if !adultsButton.isSelected {
+            adultsButton.isSelected = true
+            adultsButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            adultsButton.backgroundColor = UIColor.green
+        }
+        else {
+            adultsButton.isSelected = false
+            adultsButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+            adultsButton.backgroundColor = UIColor.systemBackground
+        }
+    }
+    
+    /**
+        There are errors in teh dominant skin type selection that I will have to address later
+     */
+    @IBAction func dryButtonAction(_ sender: Any) {
+       
+        if !dryButton.isSelected {
+            dryButton.isSelected = true
+            dryButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            dryButton.backgroundColor = UIColor.green
+        }
+        else {
+            dryButton.isSelected = false
+            dryButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+            dryButton.backgroundColor = UIColor.systemBackground
+        }
+    
+    }
+    
+    @IBAction func oilyButtonAction(_ sender: Any) {
+        
+        if !oilButton.isSelected {
+            oilButton.isSelected = true
+            oilButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            oilButton.backgroundColor = UIColor.green
+        }
+        else {
+            oilButton.isSelected = false
+            oilButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+            oilButton.backgroundColor = UIColor.systemBackground
+        }
+    }
 
+    
+    @IBAction func combinationButtonAction(_ sender: Any) {
+        
+        if !combinationButton.isSelected {
+            combinationButton.isSelected = true
+            combinationButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            combinationButton.backgroundColor = UIColor.green
+        }
+        else {
+            combinationButton.isSelected = false
+            combinationButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+            combinationButton.backgroundColor = UIColor.systemBackground
+        }
+    }
+    
+    @IBAction func sensitiveButtonAction(_ sender: Any) {
+        
+        if !sensitiveButton.isSelected {
+            sensitiveButton.isSelected = true
+            sensitiveButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            sensitiveButton.backgroundColor = UIColor.green
+        }
+        else {
+            sensitiveButton.isSelected = false
+            sensitiveButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+            sensitiveButton.backgroundColor = UIColor.systemBackground
+        }
+    }
+    
+    @IBAction func submitButtonAction(_ sender: Any) {
+        
+        if !submitButton.isSelected {
+            submitButton.isSelected = true
+            submitButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            submitButton.backgroundColor = UIColor.green
+        }
+        else {
+            submitButton.isSelected = false
+            submitButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+            submitButton.backgroundColor = UIColor.systemBackground
+        }
+    }
+    
+    
+    
+    }
 
+//    @IBAction func massClickGreen(_ sender: Any) {
+//
+//        if!massButton.is
+//        if !massButton.isSelected {
+//            massButton.isSelected = true
+//            massButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
+//            massButton.backgroundColor = UIColor.green
+//        }
+//        else {
+//            massButton.isSelected = false
+//            massButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+//            massButton.backgroundColor = UIColor.systemBackground
+//    }
 
 //        @IBAction func Submit(_ sender: Any) {
 //            iModel.gender = Gender.text ?? "N/A"

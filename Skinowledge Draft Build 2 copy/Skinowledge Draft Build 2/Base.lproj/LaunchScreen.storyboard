@@ -19,9 +19,13 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="nhd-LF-BHl">
                                 <rect key="frame" x="90" y="344" width="234" height="168"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="nhd-LF-BHl" secondAttribute="height" multiplier="39:28" id="CU6-EV-hxB"/>
+                                    <constraint firstAttribute="width" secondItem="nhd-LF-BHl" secondAttribute="height" multiplier="39:28" id="PWY-0d-JWp"/>
                                     <constraint firstAttribute="width" secondItem="nhd-LF-BHl" secondAttribute="height" multiplier="234:125" id="TNL-6W-bRj"/>
                                     <constraint firstAttribute="width" secondItem="nhd-LF-BHl" secondAttribute="height" multiplier="117:59" id="Wdt-Re-m7i"/>
+                                    <constraint firstAttribute="width" constant="220" id="ZYn-cD-bed"/>
                                     <constraint firstAttribute="width" secondItem="nhd-LF-BHl" secondAttribute="height" multiplier="15:8" id="uC7-9n-Kj2"/>
+                                    <constraint firstAttribute="height" constant="150" id="wzw-qv-3Zo"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -29,6 +33,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nhd-LF-BHl" secondAttribute="trailing" constant="120" id="7Dv-9Y-fvh"/>
+                            <constraint firstItem="nhd-LF-BHl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="JBH-B9-6Nn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nhd-LF-BHl" secondAttribute="bottom" constant="300" id="PKn-Tr-hjm"/>
                             <constraint firstItem="nhd-LF-BHl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="350" id="U2R-fw-YJA"/>
                             <constraint firstItem="nhd-LF-BHl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="dby-CP-2KA"/>
