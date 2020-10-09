@@ -114,11 +114,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     
-    @IBAction func skinSensitive(_ sender: Any)
-    {
+    @IBAction func skinSensitive(_ sender: Any) {
         iModel.skinType = "Sensitive"
         print(iModel.skinType)
     }
+
     
     @IBAction func Submit(_ sender: Any) {
         iModel.createCSV(iModel: iModel)
@@ -211,7 +211,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     /**
-        There are errors in teh dominant skin type selection that I will have to address later
+        There are errors in the dominant skin type selection that I will have to address later
      */
     @IBAction func dryButtonAction(_ sender: Any) {
        

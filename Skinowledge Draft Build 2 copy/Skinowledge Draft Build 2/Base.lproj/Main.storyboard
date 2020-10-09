@@ -160,8 +160,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Combination"/>
                                 <connections>
-                                    <action selector="combinationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KBk-fY-Cbb"/>
-                                    <action selector="combinationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7tq-KD-L7v"/>
+                                    <action selector="combinationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TWZ-b4-uD6"/>
                                     <action selector="skinCombo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNV-NL-JI6"/>
                                 </connections>
                             </button>
@@ -170,9 +169,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sensitive"/>
                                 <connections>
-                                    <action selector="sensitiveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4sU-FT-1FC"/>
-                                    <action selector="sensitiveButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pi8-gb-LJz"/>
-                                    <action selector="skinSensitive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4DR-M2-yjh"/>
+                                    <action selector="sensitiveButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Act-aY-Zgq"/>
+                                    <action selector="skinSensitive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRo-gW-O3H"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -186,6 +184,8 @@
                         <outlet property="adultsButton" destination="oYc-bO-isP" id="uMB-pp-avw"/>
                         <outlet property="combinationButton" destination="GBu-6N-pje" id="aIb-Wl-Epj"/>
                         <outlet property="dryButton" destination="Wot-gI-lQr" id="Vsj-h7-RVF"/>
+                        <outlet property="female" destination="qGx-R2-dfw" id="5Gr-DC-No9"/>
+                        <outlet property="male" destination="74c-dZ-mYT" id="M3t-ET-38w"/>
                         <outlet property="oilButton" destination="hKC-vW-pne" id="xbG-v4-Ihz"/>
                         <outlet property="sensitiveButton" destination="CsG-I5-kVb" id="To7-Mm-iIx"/>
                         <outlet property="submitButton" destination="H7a-T2-XZ7" id="ZMg-b4-Xgv"/>
