@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    @IBOutlet weak var picker: UIPickerView!
+    //@IBOutlet weak var picker: UIPickerView!
     
     // Number of columns of data
       func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -25,14 +25,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
           return pickerData[row]
       }
     //this does not work yet
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    /*func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
            // This method is triggered whenever the user makes a change to the picker selection.
            // The parameter named row and component represents what was selected.
         var s = pickerData[component]
         iModel.skinType = s
         print(iModel.skinType)
         
-    }
+    }*/
     
     var issue: String = ""
     var nextState = false
@@ -41,19 +41,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.picker.delegate = self
-        self.picker.dataSource = self
-        pickerData = ["Dry", "Oily", "Combination", "Sensitive"]
-        // Do any additional setup after loading the view.
-
     }
     
     var iModel = Model()
     
     //Next step: find way to put this all in same method
-    @IBOutlet weak var Male: UIButton!
+    @IBOutlet weak var male: UIButton!
     
-    @IBOutlet weak var Female: UIButton!
+    @IBOutlet weak var female: UIButton!
     
     @IBOutlet weak var teensButton: UIButton!
     
@@ -73,14 +68,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func updateGendertoMale(_ sender: UIButton) {
         
-        iModel.gender = Male.currentTitle!
+        iModel.gender = male.currentTitle!
         print(iModel.gender)
         
     }
     
     @IBAction func updateGendertoFemale(_ sender: UIButton) {
         
-        iModel.gender = Female.currentTitle!
+        iModel.gender = female.currentTitle!
         print(iModel.gender)
         
     }
@@ -147,29 +142,29 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
      **/
     @IBAction func buttonColorChange(_ sender: Any) {
         
-        if !Male.isSelected {
-            Male.isSelected = true
-            Male.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            Male.backgroundColor = UIColor.green
+        if !male.isSelected {
+            male.isSelected = true
+            male.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            male.backgroundColor = UIColor.green
         }
         else {
-            Male.isSelected = false
-            Male.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
-            Male.backgroundColor = UIColor.systemBackground
+            male.isSelected = false
+            male.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            male.backgroundColor = UIColor.systemBackground
         }
         //Male.tintColor = UIColor.green
     }
     
     @IBAction func buttonColorChangeF(_ sender: Any) {
-        if !Female.isSelected {
-            Female.isSelected = true
-            Female.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            Female.backgroundColor = UIColor.green
+        if !female.isSelected {
+            female.isSelected = true
+            female.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            female.backgroundColor = UIColor.green
         }
         else {
-            Female.isSelected = false
-            Female.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
-            Female.backgroundColor = UIColor.systemBackground
+            female.isSelected = false
+            female.setTitleColor(UIColor.white, for: UIControl.State.normal)
+            female.backgroundColor = UIColor.systemBackground
         }
         //Female.tintColor = UIColor.green
     }
