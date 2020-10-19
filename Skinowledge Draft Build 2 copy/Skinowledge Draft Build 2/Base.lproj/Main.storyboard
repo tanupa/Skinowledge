@@ -77,7 +77,7 @@
                                 <state key="normal" title="Male"/>
                                 <connections>
                                     <action selector="buttonColorChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rva-BT-n1L"/>
-                                    <action selector="updateGendertoMale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="duK-eu-LLY"/>
+                                    <action selector="updateGender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yzp-xg-IVo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is your gender?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ur4-lU-Zy9">
@@ -93,7 +93,7 @@
                                 <state key="normal" title="Female"/>
                                 <connections>
                                     <action selector="buttonColorChangeF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uKL-ty-BuB"/>
-                                    <action selector="updateGendertoFemale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QoX-P0-bES"/>
+                                    <action selector="updateGender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pxr-SO-uxW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is your age group?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8T-sl-JG0">
@@ -108,7 +108,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Teens (13-18)"/>
                                 <connections>
-                                    <action selector="ageTeens:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h9G-y8-hZZ"/>
+                                    <action selector="ageTeens:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cNd-c7-rIf"/>
                                     <action selector="teenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RvM-Ta-yU1"/>
                                 </connections>
                             </button>
@@ -117,7 +117,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Young Adults (18-30)"/>
                                 <connections>
-                                    <action selector="ageYA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0qo-C7-Skp"/>
+                                    <action selector="ageYA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2AK-6n-km2"/>
                                     <action selector="youngAdultsButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2l-Nk-heL"/>
                                 </connections>
                             </button>
@@ -143,7 +143,7 @@
                                 <state key="normal" title="Dry"/>
                                 <connections>
                                     <action selector="dryButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5H-Et-vIK"/>
-                                    <action selector="skinDry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NB3-7I-h1L"/>
+                                    <action selector="skinType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GrF-9X-Gt8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKC-vW-pne">
@@ -152,7 +152,7 @@
                                 <state key="normal" title="Oily"/>
                                 <connections>
                                     <action selector="oilyButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJt-Ce-Rno"/>
-                                    <action selector="skinOily:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CLk-W0-DVd"/>
+                                    <action selector="skinType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qok-Dm-ivx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBu-6N-pje">
@@ -161,7 +161,7 @@
                                 <state key="normal" title="Combination"/>
                                 <connections>
                                     <action selector="combinationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TWZ-b4-uD6"/>
-                                    <action selector="skinCombo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNV-NL-JI6"/>
+                                    <action selector="skinType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibQ-lf-e3x"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsG-I5-kVb">
@@ -170,7 +170,7 @@
                                 <state key="normal" title="Sensitive"/>
                                 <connections>
                                     <action selector="sensitiveButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Act-aY-Zgq"/>
-                                    <action selector="skinSensitive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRo-gW-O3H"/>
+                                    <action selector="skinType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QWC-rN-iKF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -195,12 +195,175 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="75"/>
+            <point key="canvasLocation" x="112" y="75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="scF-tZ-hKe">
+            <objects>
+                <viewController id="MwO-2G-j7E" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a6v-XE-y8u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I2E-rJ-MgO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="You selected: Aging" id="3A3-TH-AQv"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtn-AV-dab">
+                                <rect key="frame" x="168" y="186" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Crows Feet"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="MwO-2G-j7E" eventType="touchUpInside" id="ILF-yw-NEh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSR-Zi-uWF">
+                                <rect key="frame" x="168" y="268" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Smile Lines"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="MwO-2G-j7E" eventType="touchUpInside" id="X2Q-fu-6RV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfn-Pt-8G0">
+                                <rect key="frame" x="166" y="352" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Frown Lines"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="MwO-2G-j7E" eventType="touchUpInside" id="JSc-dx-3Ri"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kI-rb-lMA">
+                                <rect key="frame" x="178" y="430" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Eyebags"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="MwO-2G-j7E" eventType="touchUpInside" id="9Qa-qU-jx3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skin aging is a natural process!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6m-EE-rT9">
+                                <rect key="frame" x="89" y="116" width="236" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q3e-UL-fQp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lch-dA-TZi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jnS-gx-vOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="802"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Oma-RH-FNi">
+            <objects>
+                <viewController id="UhJ-zx-Il0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9FO-hW-1zm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWY-O8-Q3L">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="You selected: Discoloration" id="a0S-5u-GNR"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZf-ub-9fR">
+                                <rect key="frame" x="166" y="168" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dark Circles"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJw-Tx-57V">
+                                <rect key="frame" x="141" y="235" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Hyperpigmentation"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discoloration is easily reversible!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnR-hr-EFv">
+                                <rect key="frame" x="83" y="103" width="248" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2EJ-3P-8xv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="z4K-sy-8HM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJN-AZ-BzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="792"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LTE-v8-1Ui">
+            <objects>
+                <viewController id="MdX-S8-Zf9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EVg-Xf-Aak">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WlP-qc-G1e">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="You selected: Sun Damage" id="QU1-5q-qQR"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbI-Nr-imV">
+                                <rect key="frame" x="178" y="161" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sunburn"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVk-qP-vJn">
+                                <rect key="frame" x="178" y="234" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Freckles"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WA-tZ-0cy">
+                                <rect key="frame" x="141" y="296" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Hyperpigmentation"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqk-GC-rBO">
+                                <rect key="frame" x="173" y="356" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fine Lines"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sun damage comes in many forms!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beH-7G-R5K">
+                                <rect key="frame" x="74" y="95" width="267" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rw0-b4-39p">
+                                <rect key="frame" x="186" y="423" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Moles"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eQQ-aF-K9h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GaF-g3-I5K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r0f-Gb-y7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2026" y="792"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="If3-bN-TNT">
             <objects>
-                <viewController id="V3A-tu-hv3" sceneMemberID="viewController">
+                <viewController id="V3A-tu-hv3" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="64K-AS-xtW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,25 +382,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTT-Q3-YIS">
-                                <rect key="frame" x="190" y="171" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Acne"/>
-                                <connections>
-                                    <action selector="acneMainIssue:" destination="Ayn-3r-rWq" eventType="touchUpInside" id="ys5-K9-nu0"/>
-                                    <segue destination="G7A-e0-0NN" kind="show" id="cNv-pw-aQE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmV-Y5-V4t">
                                 <rect key="frame" x="187" y="268" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Aging"/>
+                                <connections>
+                                    <action selector="issue:" destination="V3A-tu-hv3" eventType="touchUpInside" id="Kw4-33-nSz"/>
+                                    <segue destination="MwO-2G-j7E" kind="show" id="4zv-xi-Vru"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GC7-0M-Iz3">
                                 <rect key="frame" x="169" y="221" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Acne Scars"/>
                                 <connections>
+                                    <action selector="issue:" destination="V3A-tu-hv3" eventType="touchUpInside" id="MiY-uK-Xo5"/>
                                     <segue destination="7Pt-CA-lh4" kind="show" id="oSM-mL-sEH"/>
                                 </connections>
                             </button>
@@ -245,11 +404,19 @@
                                 <rect key="frame" x="162" y="322" width="91" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Discoloration"/>
+                                <connections>
+                                    <action selector="issue:" destination="V3A-tu-hv3" eventType="touchUpInside" id="qxJ-0j-hDa"/>
+                                    <segue destination="UhJ-zx-Il0" kind="show" id="2hw-O7-aSi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8n-A1-7Fk">
                                 <rect key="frame" x="163" y="376" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sun Damage"/>
+                                <connections>
+                                    <action selector="issue:" destination="V3A-tu-hv3" eventType="touchUpInside" id="OJr-Pm-alv"/>
+                                    <segue destination="MdX-S8-Zf9" kind="show" id="RV2-1M-EYq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-2v-dnn">
                                 <rect key="frame" x="183" y="463" width="49" height="30"/>
@@ -257,7 +424,17 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="createFile:" destination="Ayn-3r-rWq" eventType="touchUpInside" id="mqd-QR-tgr"/>
+                                    <action selector="testFunc:" destination="V3A-tu-hv3" eventType="touchUpInside" id="zrH-Cd-WtF"/>
                                     <segue destination="Fia-OR-nmf" kind="show" id="dBv-sH-0BD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTT-Q3-YIS">
+                                <rect key="frame" x="187" y="165" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Acne"/>
+                                <connections>
+                                    <action selector="issue:" destination="V3A-tu-hv3" eventType="touchUpInside" id="RCS-9y-RWE"/>
+                                    <segue destination="G7A-e0-0NN" kind="show" id="Wi4-xq-fAE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -269,7 +446,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5e-zs-nK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ayn-3r-rWq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="955" y="92"/>
+            <point key="canvasLocation" x="992.75362318840587" y="75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UwV-k1-Uro">
@@ -299,7 +476,7 @@
         <!--View Controller-->
         <scene sceneID="X2O-0b-FQK">
             <objects>
-                <viewController id="7Pt-CA-lh4" sceneMemberID="viewController">
+                <viewController id="7Pt-CA-lh4" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ypT-Vv-NLt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,36 +499,57 @@
                                 <rect key="frame" x="178" y="154" width="58" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Atrophic"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="7Pt-CA-lh4" eventType="touchUpInside" id="NiW-OW-1zh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfO-be-QOF">
                                 <rect key="frame" x="185" y="208" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Boxcar"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="7Pt-CA-lh4" eventType="touchUpInside" id="LVy-Im-ixY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xah-Pr-xTE">
                                 <rect key="frame" x="162" y="334" width="91" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Hypertrophic"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="7Pt-CA-lh4" eventType="touchUpInside" id="Z0l-Xa-f9d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owC-gm-MaM">
                                 <rect key="frame" x="181" y="398" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ice pick"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="7Pt-CA-lh4" eventType="touchUpInside" id="d7A-X5-Mml"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bN3-pS-mVc">
                                 <rect key="frame" x="185" y="527" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Rolling"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="7Pt-CA-lh4" eventType="touchUpInside" id="w6G-Nf-C9O"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCh-xt-yBm">
                                 <rect key="frame" x="141" y="270" width="132" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Hyperpigmentation"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="7Pt-CA-lh4" eventType="touchUpInside" id="VRM-7u-gEd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obe-oJ-EkU">
                                 <rect key="frame" x="186" y="462" width="43" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Keloid"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="7Pt-CA-lh4" eventType="touchUpInside" id="eZG-M3-eiF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gdw-hA-xFp"/>
@@ -361,12 +559,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOE-Mu-tKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243" y="-644"/>
+            <point key="canvasLocation" x="1242.0289855072465" y="-644.19642857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="46h-5p-l9Y">
             <objects>
-                <viewController id="G7A-e0-0NN" sceneMemberID="viewController">
+                <viewController id="G7A-e0-0NN" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r5i-d8-fNW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,27 +589,40 @@
                                 <state key="normal" title="Cystic"/>
                                 <connections>
                                     <action selector="cysticIssue:" destination="2vq-Hx-aft" eventType="touchUpInside" id="yhV-0q-MNU"/>
+                                    <action selector="subIssue:" destination="G7A-e0-0NN" eventType="touchUpInside" id="ifZ-FM-Ca5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-51-dr9">
                                 <rect key="frame" x="169" y="206" width="79" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Blackheads"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="G7A-e0-0NN" eventType="touchUpInside" id="pA0-TA-tpt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVj-s5-zqa">
                                 <rect key="frame" x="166" y="267" width="82" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Whiteheads"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="G7A-e0-0NN" eventType="touchUpInside" id="abC-7p-BN4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ias-za-37h">
                                 <rect key="frame" x="179" y="330" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Papules"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="G7A-e0-0NN" eventType="touchUpInside" id="GcJ-5C-2cW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91U-wf-QOz">
                                 <rect key="frame" x="177" y="389" width="59" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pustules"/>
+                                <connections>
+                                    <action selector="subIssue:" destination="G7A-e0-0NN" eventType="touchUpInside" id="xon-FX-ioB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q43-3b-8kx"/>

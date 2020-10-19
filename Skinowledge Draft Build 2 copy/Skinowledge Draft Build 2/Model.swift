@@ -4,10 +4,11 @@
 //
 //  Created by Jessabelle Delen Ramos on 9/19/20.
 //
-
+//test
 
 import Foundation
-
+var profile = [CustomStringConvertible]()
+var issues = [String]()
 class Model{
     var age = ""
     var skinType = ""
@@ -25,7 +26,7 @@ extension Model{
         var csvText = ""//"Age,Gender,Skin Type\n"
         let newLine = "\(iModel.age),\(iModel.gender), \(iModel.skinType)"//\n"
         csvText.append(newLine)
-        
+        //writing to the file
         do{
             try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
         } catch {
@@ -49,8 +50,46 @@ extension Model{
               })
           })
         print(parseFile)
+        
+        /**
+                Adding existing data into Profile array
+                Following: Age, Gender, Skin type
+                    Skin Issues are then added by other methods
+         */
+        profile.append(iModel.age)
+        profile.append(iModel.gender)
+        profile.append(iModel.skinType)
+    }
+
+    
+    // Adds selected skin issue (main, or sub) to the profile array
+    // Current problem: if you click several subissues, it adds all of them instead of selecting just one
+    // NEED TO add skin issue to the CSV file
+    func addSkinIssue(issue:String)
+    {
+        profile.append(issue)
+        issues.append(issue)
+        print(profile)
     }
     
+    
+    /**
+     2. setInfo- takes in CSV file of the user, goes through every single button they clicked and runs the ingredients
+     */
+    
+    func setInfo()
+    {
+        
+    }
+    
+    /*
+     3. find products, prints out 3 ingredients and displays the products
+     */
+    
+    func getProducts()
+    {
+        
+    }
     
 }
 

@@ -7,32 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    //@IBOutlet weak var picker: UIPickerView!
+class ViewController: UIViewController, UIPickerViewDelegate {
     
-    // Number of columns of data
-      func numberOfComponents(in pickerView: UIPickerView) -> Int {
-          return 1
-      }
-      
-      // The number of rows of data
-      func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-          return pickerData.count
-      }
-      
-      // The data to return fopr the row and component (column) that's being passed in
-      func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-          return pickerData[row]
-      }
-    //this does not work yet
-    /*func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-           // This method is triggered whenever the user makes a change to the picker selection.
-           // The parameter named row and component represents what was selected.
-        var s = pickerData[component]
-        iModel.skinType = s
-        print(iModel.skinType)
-        
-    }*/
+    // removed all the UIDataPicker code
     
     var issue: String = ""
     var nextState = false
@@ -66,22 +43,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var submitButton: UIButton!
     
-    @IBAction func updateGendertoMale(_ sender: UIButton) {
-        
-        iModel.gender = male.currentTitle!
+    /**
+            Consolidated gender assignment functions into one function
+     */
+    @IBAction func updateGender(_ sender: UIButton) {
+        let titleValueString = sender.currentTitle!
+        iModel.gender = titleValueString
         print(iModel.gender)
-        
     }
     
-    @IBAction func updateGendertoFemale(_ sender: UIButton) {
-        
-        iModel.gender = female.currentTitle!
-        print(iModel.gender)
-        
-    }
+    // Next step: find way to put these all in the same method
+    // tried to use the same method as updateGender, but it takes the words in as well
+    // and we don't need that
     
-    //Next step: find way to put these all in the same method
-    // maybe we could use a Stepper
     @IBAction func ageTeens(_ sender: Any) {
         iModel.age = "13-18"
         print(iModel.age)
@@ -97,25 +71,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         print(iModel.age)
     }
     
-    
-    @IBAction func skinDry(_ sender: Any) {
-        iModel.skinType = "Dry"
-        print(iModel.skinType)
-    }
-    
-    @IBAction func skinOily(_ sender: Any) {
-        iModel.skinType = "Oily"
-        print(iModel.skinType)
-    }
-    
-    @IBAction func skinCombo(_ sender: Any) {
-        iModel.skinType = "Combo"
-        print(iModel.skinType)
-    }
-    
-    
-    @IBAction func skinSensitive(_ sender: Any) {
-        iModel.skinType = "Sensitive"
+    /**
+            Consolidated all the skinType assignment functions into one function
+     */
+    @IBAction func skinType(_ sender: UIButton) {
+        let titleValueString = sender.currentTitle!
+        iModel.skinType = titleValueString
         print(iModel.skinType)
     }
 
@@ -124,22 +85,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         iModel.createCSV(iModel: iModel)
     }
     
-    
-    //trying to add alert
-    @IBAction func acneMainIssue(_ sender: Any) {
-        iModel.mainIssue = " Acne"
-        print(iModel.mainIssue)
-        
-    }
-    
-    @IBAction func cysticIssue(_ sender: Any) {
-        iModel.subIssue = "Cystic Acne"
-        print(iModel.subIssue)
-        
-    }
-    
     /**These funcs below will change the color of the button to green when pressed, and regular color when delesected
      **/
+
     @IBAction func buttonColorChange(_ sender: Any) {
         
         if !male.isSelected {
@@ -285,9 +233,22 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
-    
-    
+    @IBAction func issue(_ sender: UIButton) {
+        let titleValueString = sender.currentTitle!
+        iModel.mainIssue = titleValueString
+        print(iModel.mainIssue)
+        iModel.addSkinIssue(issue: iModel.mainIssue)
     }
+    
+    // Subissue: accepts all subissues from all main issues
+    @IBAction func subIssue(_ sender: UIButton) {
+        let titleValueString = sender.currentTitle!
+        iModel.subIssue = titleValueString
+        print(iModel.subIssue)
+        iModel.addSkinIssue(issue: iModel.subIssue)
+    }
+    
+}
 
 //    @IBAction func massClickGreen(_ sender: Any) {
 //
