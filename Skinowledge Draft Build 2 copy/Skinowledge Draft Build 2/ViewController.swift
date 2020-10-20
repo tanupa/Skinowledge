@@ -237,16 +237,14 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBAction func issue(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
         iModel.mainIssue = titleValueString
-        print(iModel.mainIssue)
-        iModel.addSkinIssue(issue: iModel.mainIssue)
+        iModel.addSkinIssue(iModel: iModel)
     }
     
     // Subissue: accepts all subissues from all main issues
     @IBAction func subIssue(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
         iModel.subIssue = titleValueString
-        print(iModel.subIssue)
-        iModel.addSkinIssue(issue: iModel.subIssue)
+        iModel.addSkinIssue(iModel: iModel)
     }
     
 }

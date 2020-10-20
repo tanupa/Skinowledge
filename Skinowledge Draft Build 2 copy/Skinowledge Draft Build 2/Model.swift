@@ -18,6 +18,8 @@ class Model{
     var gender = ""
     var mainIssue = ""
     var subIssue = ""
+    var csvText = ""//"Age,Gender,Skin Type\n"
+    var subIngredients: [String] = []
 }
 extension Model{
     
@@ -69,14 +71,12 @@ extension Model{
     // Adds selected skin issue (main, or sub) to the profile array
     // Current problem: if you click several subissues, it adds all of them instead of selecting just one
     // NEED TO add skin issue to the CSV file
-    func addSkinIssue(issue:String)
+    func addSkinIssue(iModel: Model)
     {
         //having issues, rewriting file over adding to it
-        profile.append(issue)
-        issues.append(issue)
+        profile.append(mainIssue)
         print(profile)
-        var csvText = ""
-        let newLine = "\(issue)"
+        let newLine = "\(iModel.mainIssue)"//\n"
         csvText.append(newLine)
         //writing to the file
         do{
@@ -87,6 +87,48 @@ extension Model{
         }
     }
     
+    func addSubIssue(iModel: Model)
+     {
+         profile.append(subIssue)
+         issues.append(subIssue)
+         iModel.setInfo(iModel: iModel)
+     }
+    
+    func setInfo(iModel: Model)
+        {
+            print("Profile", profile)
+            print("Issues", issues)
+            iModel.getIngredients(iModel: iModel)
+    //        print("\(iModel.subIngredients)")
+            print("\(iModel.subIssue)","Ingredients", subIngredients)
+        }
+    
+    func getIngredients(iModel: Model)
+      {
+          let cysticIngredients: [String] = ["Salicylic Acid", "Benzoyl Peroxide","Retinoid"]
+          let whiteheadIngredients: [String] = ["Retinoid", "Salicylic Acid"]
+          let blackheadIngredients: [String] = ["Salicylic Acid", "Retinoid"]
+          let papulesIngredients: [String] = ["Hydrocolloid Patches", "Retinoid","Salicylic Acid", "Benzoyl Peroxide"]
+          let acneIngredientDictionary: [String: [String]] = ["Cystic": cysticIngredients, "Whiteheads": whiteheadIngredients, "Blackheads": blackheadIngredients, "Papules" : papulesIngredients]
+          
+          // subissue: ingredients to treat issue
+          for (subissue, ingredientList) in acneIngredientDictionary {
+              if (iModel.subIssue == subissue){
+              //print("\(subissue): \(ingredientList)")
+                  iModel.subIngredients = ingredientList
+              }
+          }
+//          print("look")
+//          print(subIngredients[0])
+//          iModel.getProducts(ingredients: subIngredients[0])
+        
+          // ingredients:products map, products is its own array
+          
+  //        for issue in issues {
+  //
+  //        }
+          
+      }
     
     /**
      2. setInfo- takes in array of the user, goes through every single button they clicked and runs getProducts()
