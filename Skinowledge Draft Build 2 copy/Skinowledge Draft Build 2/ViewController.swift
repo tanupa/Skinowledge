@@ -22,7 +22,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     var iModel = Model()
     
-    
     //Next step: find way to put this all in same method
     @IBOutlet weak var male: UIButton!
     
@@ -237,6 +236,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBAction func issue(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
         iModel.mainIssue = titleValueString
+        print(iModel.mainIssue)
         iModel.addSkinIssue(iModel: iModel)
     }
     
@@ -244,7 +244,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBAction func subIssue(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
         iModel.subIssue = titleValueString
-        iModel.addSkinIssue(iModel: iModel)
+        print(iModel.subIssue)
+        iModel.addSubIssue(iModel: iModel)
+//        iModel.addSkinIssue(issue: iModel.subIssue)
     }
     
 }

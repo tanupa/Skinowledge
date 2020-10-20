@@ -64,7 +64,7 @@ extension Model{
         profile.append(iModel.skinType)
         
         // change this in the future
-        getProducts(ingredients: "mandelic acid")
+       // getProducts(ingredients: "mandelic acid")
     }
 
     
@@ -120,7 +120,7 @@ extension Model{
           }
 //          print("look")
 //          print(subIngredients[0])
-//          iModel.getProducts(ingredients: subIngredients[0])
+          iModel.getProducts(ingredients: subIngredients[0])
         
           // ingredients:products map, products is its own array
           
