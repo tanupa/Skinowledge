@@ -20,6 +20,7 @@ class Model{
     var subIssue = ""
 }
 extension Model{
+    
     func createCSV(iModel: Model)
     {
         print(path)
@@ -59,6 +60,9 @@ extension Model{
         profile.append(iModel.age)
         profile.append(iModel.gender)
         profile.append(iModel.skinType)
+        
+        // change this in the future
+        getProducts(ingredients: "mandelic acid")
     }
 
     
@@ -88,13 +92,13 @@ extension Model{
      2. setInfo- takes in array of the user, goes through every single button they clicked and runs getProducts()
      */
     
-    func setInfo()
+    /*func setInfo()
     {
-        var dictionary: [String: String] = ["Hyperpigmentation": "Mandelic Acid Product", "Hyperpigmentation": "Azelic Acid Product", "Hyperpigmentation": "Tranexamic Acid"]
-        getProducts(ingredients: "Mandelic Acid")
+        //var dictionary: [String: String] = ["Hyperpigmentation": "Mandelic Acid Product", "Hyperpigmentation": //"Azelic Acid Product", "Hyperpigmentation": "Tranexamic Acid"]
+        //getProducts(ingredients: "Mandelic Acid")
        // getProducts(ingredients: "Azelic Acid")
        // getProducts(ingredients: "Tranexamic Acid")
-    }
+    }*/
     
     /*
      3. find products, prints out 3 ingredients and displays the products
@@ -103,13 +107,16 @@ extension Model{
     func getProducts(ingredients: String)
     {
         var query = ingredients
-        query = query.replacingOccurrences(of: " ", with: "+")
-        let url = "https://www.sephora.com/?keyword=" + query
-        UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
+        query = query.replacingOccurrences(of: " ", with: "%20")
+      //  let url = "https://www.sephora.com/?keyword=" + query
+        //UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
+        
+        guard let url = URL(string: "https://www.sephora.com/search?keyword=" + query) else { return }
+        UIApplication.shared.open(url)
+        
 //        [[NSWorkspace, sharedWorkspace], openURL,: [NSURL URLWithString:@"https://www.sephora.com/?keyword=" + query]];
         /*
         search it up on google, bring back links
- 
  */
     }
     

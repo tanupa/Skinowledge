@@ -22,6 +22,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     var iModel = Model()
     
+    
     //Next step: find way to put this all in same method
     @IBOutlet weak var male: UIButton!
     
