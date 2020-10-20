@@ -7,8 +7,11 @@
 //test
 
 import Foundation
+import UIKit
 var profile = [CustomStringConvertible]()
 var issues = [String]()
+let fileName = "Skin.csv"
+let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
 class Model{
     var age = ""
     var skinType = ""
@@ -17,11 +20,8 @@ class Model{
     var subIssue = ""
 }
 extension Model{
-    
     func createCSV(iModel: Model)
     {
-        let fileName = "Skin.csv"
-        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
         print(path)
         var csvText = ""//"Age,Gender,Skin Type\n"
         let newLine = "\(iModel.age),\(iModel.gender), \(iModel.skinType)"//\n"
@@ -35,7 +35,7 @@ extension Model{
         }
         
     /**
-         parsing the CSV into an array that can be of any data type
+         parsing the CSV into an array that can be of any data type#imageLiteral(resourceName: "simulator_screenshot_89B1D6B8-AB34-48ED-9780-D293E21854A0.png")
     */
         let parseFile: [[CustomStringConvertible]] = csvText
           .components(separatedBy: "\n")
@@ -67,28 +67,50 @@ extension Model{
     // NEED TO add skin issue to the CSV file
     func addSkinIssue(issue:String)
     {
+        //having issues, rewriting file over adding to it
         profile.append(issue)
         issues.append(issue)
         print(profile)
+        var csvText = ""
+        let newLine = "\(issue)"
+        csvText.append(newLine)
+        //writing to the file
+        do{
+            try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+        } catch {
+            print("Failed to create file")
+            print("\(error)")
+        }
     }
     
     
     /**
-     2. setInfo- takes in CSV file of the user, goes through every single button they clicked and runs the ingredients
+     2. setInfo- takes in array of the user, goes through every single button they clicked and runs getProducts()
      */
     
     func setInfo()
     {
-        
+        var dictionary: [String: String] = ["Hyperpigmentation": "Mandelic Acid Product", "Hyperpigmentation": "Azelic Acid Product", "Hyperpigmentation": "Tranexamic Acid"]
+        getProducts(ingredients: "Mandelic Acid")
+       // getProducts(ingredients: "Azelic Acid")
+       // getProducts(ingredients: "Tranexamic Acid")
     }
     
     /*
      3. find products, prints out 3 ingredients and displays the products
      */
     
-    func getProducts()
+    func getProducts(ingredients: String)
     {
-        
+        var query = ingredients
+        query = query.replacingOccurrences(of: " ", with: "+")
+        let url = "https://www.sephora.com/?keyword=" + query
+        UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
+//        [[NSWorkspace, sharedWorkspace], openURL,: [NSURL URLWithString:@"https://www.sephora.com/?keyword=" + query]];
+        /*
+        search it up on google, bring back links
+ 
+ */
     }
     
 }
