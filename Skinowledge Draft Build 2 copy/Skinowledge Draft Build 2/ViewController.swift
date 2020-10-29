@@ -7,22 +7,44 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate {
+class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelegate {
     
+
     // removed all the UIDataPicker code
     
     var issue: String = ""
     var nextState = false
     
-    var pickerData: [String] = [String]()
+    var images:[String] = ["test1", "test2", "test3"]
+    
+    var frame = CGRect(x:0, y:0, width:0, height: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        pageControl.numberOfPages = images.count
+        
+        for index in 0..<images.count{
+            frame.origin.x = scrollView.frame.size.width * CGFloat(index)
+            frame.size = scrollView.frame.size
+            
+            let threeImages = UIImageView(frame: frame)
+            threeImages.image = UIImage(named: images[index])
+            self.scrollView.addSubview(threeImages)
+        }
+        scrollView.contentSize = CGSize(width: scrollView.frame.size.width*CGFloat(images.count), height: scrollView.frame.size.height)
+        scrollView.delegate = self
     }
     
     var iModel = Model()
     
     //Next step: find way to put this all in same method
+    
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var getStartedButton: UIButton!
+    
     @IBOutlet weak var male: UIButton!
     
     @IBOutlet weak var female: UIButton!
@@ -43,14 +65,19 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     @IBOutlet weak var submitButton: UIButton!
     
-    /**
-            Consolidated gender assignment functions into one function
-     */
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        var pageNumber = scrollView.contentOffset.x/scrollView.frame.size.width
+        pageControl.currentPage = Int(pageNumber)
+    }
     @IBAction func updateGender(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
         iModel.gender = titleValueString
         print(iModel.gender)
     }
+    
+    /**
+            Consolidated gender assignment functions into one function
+     */
     
     // Next step: find way to put these all in the same method
     // tried to use the same method as updateGender, but it takes the words in as well
@@ -250,62 +277,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
 }
-
-//    @IBAction func massClickGreen(_ sender: Any) {
-//
-//        if!massButton.is
-//        if !massButton.isSelected {
-//            massButton.isSelected = true
-//            massButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-//            massButton.backgroundColor = UIColor.green
-//        }
-//        else {
-//            massButton.isSelected = false
-//            massButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
-//            massButton.backgroundColor = UIColor.systemBackground
-//    }
-
-//        @IBAction func Submit(_ sender: Any) {
-//            iModel.gender = Gender.text ?? "N/A"
-//            iModel.age = Int(Age.text ?? "0") ?? 0
-//            iModel.skinType = SkinType.text ?? "N/A"
-//            iModel.createCSV(iModel: iModel)
-//        }
-//        @IBOutlet weak var Gender: UITextField!
-//        @IBOutlet weak var Age: UITextField!
-//        @IBOutlet weak var SkinType: UITextField!
-//    @IBAction func acne(_ sender: UIButton) {
-//        issue = "Acne"
-//        iModel.mainIssue = issue;
-//        iModel.createCSV(iModel: iModel)
-//        print(issue)
-//    }
-    
-//    @IBAction func showMessage1(sender: UIButton) {
-//
-//        let alertController = UIAlertController(title: "You selected \(issue)", message: "We will now pick your acne type", preferredStyle: UIAlertController.Style.alert)
-//        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//        present(alertController, animated: true, completion: nil)
-//
-//
-//        nextState = true
-//    }
-//
-//    @IBAction func showMessage2(sender: UIButton) {
-//        issue = "Aging"
-//        iModel.mainIssue = issue;
-//        iModel.createCSV(iModel: iModel)
-//        print(issue)
-//
-//
-//        let alertController = UIAlertController(title: "You selected \(issue)", message: "Signs of aging are natural, but there are still ways to combat it.", preferredStyle: UIAlertController.Style.alert)
-//        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//        present(alertController, animated: true, completion: nil)
-//
-//
-//        nextState = true
-//    }
-
 
 
 
