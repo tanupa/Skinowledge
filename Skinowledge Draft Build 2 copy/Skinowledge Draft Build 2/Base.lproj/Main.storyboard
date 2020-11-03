@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n9j-82-Zmb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="54H-S8-Vks">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -9,6 +9,35 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="a0E-s2-dyc">
+            <objects>
+                <viewController id="54H-S8-Vks" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sFC-Qv-dlv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJL-fU-kqa" userLabel="start">
+                                <rect key="frame" x="167" y="565" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get Started"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="lYX-DJ-zaa"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MzC-ck-ADK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nsr-s0-u1E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tn1-I9-f3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2410.144927536232" y="91.304347826086968"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="flO-BG-HAk">
             <objects>
                 <viewController id="n9j-82-Zmb" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,11 +46,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1OC-Oz-yT8" userLabel="scrollView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="537"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="JqF-p0-dGz" userLabel="pageControl">
-                                        <rect key="frame" x="146" y="666" width="123" height="28"/>
+                                        <rect key="frame" x="146" y="452" width="123" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <color key="currentPageIndicatorTintColor" systemColor="systemBackgroundColor"/>
@@ -34,19 +63,16 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="Kr9-Eg-p5k"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxZ-oC-FbD" userLabel="start">
-                                <rect key="frame" x="167" y="795" width="80" height="30"/>
+                                <rect key="frame" x="167" y="572" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Get Started"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="MDx-H4-h2J"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="99G-FK-1yM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="getStartedButton" destination="cxZ-oC-FbD" id="rwq-gy-8Tj"/>
+                        <outlet property="getStartedButton" destination="cxZ-oC-FbD" id="pOZ-mn-ORP"/>
                         <outlet property="pageControl" destination="JqF-p0-dGz" id="dWw-37-oXg"/>
                         <outlet property="scrollView" destination="1OC-Oz-yT8" id="mcq-7g-Gk3"/>
                     </connections>
@@ -54,7 +80,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtJ-VB-0FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="O5O-Vb-p34" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2296" y="92"/>
+            <point key="canvasLocation" x="-3110" y="876"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

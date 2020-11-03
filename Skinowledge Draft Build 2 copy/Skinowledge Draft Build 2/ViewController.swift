@@ -21,7 +21,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /**
+         This was supposed to be the scroll view, we can work on this later in the development process. I saved thew view controller, don't delete it.
+         */
+        /*if pageControl != nil {
+            print("Contains a value!")
+        } else {
+            print("Doesn’t contain a value.")
+        }
+        
+        
         pageControl.numberOfPages = images.count
+        
         
         for index in 0..<images.count{
             frame.origin.x = scrollView.frame.size.width * CGFloat(index)
@@ -31,17 +43,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
             threeImages.image = UIImage(named: images[index])
             self.scrollView.addSubview(threeImages)
         }
-        scrollView.contentSize = CGSize(width: scrollView.frame.size.width*CGFloat(images.count), height: scrollView.frame.size.height)
-        scrollView.delegate = self
+        scrollView.contentSize = CGSize(width: (scrollView.frame.size.width*CGFloat(images.count)), height: scrollView.frame.size.height)
+        scrollView.delegate = self*/
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     var iModel = Model()
     
     //Next step: find way to put this all in same method
     
-    @IBOutlet weak var pageControl: UIPageControl!
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    
+    /*@IBOutlet weak var pageControl: UIPageControl!
+    
+    @IBOutlet weak var scrollView: UIScrollView!*/
     
     @IBOutlet weak var getStartedButton: UIButton!
     
@@ -65,7 +83,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     
     @IBOutlet weak var submitButton: UIButton!
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    
+    /**
+     For scroll view
+     */
+    /*func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
         var pageNumber = scrollView.contentOffset.x/scrollView.frame.size.width
         pageControl.currentPage = Int(pageNumber)
     }
@@ -73,8 +96,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         let titleValueString = sender.currentTitle!
         iModel.gender = titleValueString
         print(iModel.gender)
-    }
-    
+    }*/
+     
     /**
             Consolidated gender assignment functions into one function
      */
