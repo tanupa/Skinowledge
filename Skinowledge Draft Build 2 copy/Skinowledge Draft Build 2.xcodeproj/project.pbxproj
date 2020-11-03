@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D54D4CCF255215DD00819204 /* ViewControllerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54D4CCE255215DD00819204 /* ViewControllerProfile.swift */; };
 		D588C9A22515C9B800990DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588C9A12515C9B800990DBF /* AppDelegate.swift */; };
 		D588C9A42515C9B800990DBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588C9A32515C9B800990DBF /* SceneDelegate.swift */; };
 		D588C9A62515C9B800990DBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588C9A52515C9B800990DBF /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D54D4CCE255215DD00819204 /* ViewControllerProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProfile.swift; sourceTree = "<group>"; };
 		D588C99E2515C9B800990DBF /* Skinowledge Draft Build 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Skinowledge Draft Build 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D588C9A12515C9B800990DBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D588C9A32515C9B800990DBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				D588C9B22515C9BD00990DBF /* Info.plist */,
 				D588C9AA2515C9B800990DBF /* Skinowledge_Draft_Build_2.xcdatamodeld */,
 				D588C9D72516F10D00990DBF /* Model.swift */,
+				D54D4CCE255215DD00819204 /* ViewControllerProfile.swift */,
 			);
 			path = "Skinowledge Draft Build 2";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54D4CCF255215DD00819204 /* ViewControllerProfile.swift in Sources */,
 				D588C9D82516F10D00990DBF /* Model.swift in Sources */,
 				D588C9A62515C9B800990DBF /* ViewController.swift in Sources */,
 				D588C9A22515C9B800990DBF /* AppDelegate.swift in Sources */,

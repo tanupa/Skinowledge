@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.updateProfile()
+       // self.updateProfile()
         
         /**
          This was supposed to be the scroll view, we can work on this later in the development process. I saved thew view controller, don't delete it.
@@ -118,6 +118,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     @IBAction func ageTeens(_ sender: Any) {
         iModel.age = "13-18"
         print(iModel.age)
+        
     }
     
     @IBAction func ageYA(_ sender: Any) {
@@ -310,43 +311,43 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     
     
     
-    @IBOutlet weak var profileName: UILabel!
-
-    @IBOutlet weak var ageLabel: UILabel!
-
-    @IBOutlet weak var sexLabel: UILabel!
-
-    @IBOutlet weak var mainIssueLabel: UILabel!
-
-    @IBOutlet weak var subIssueLabel: UILabel!
-
-    @IBOutlet weak var mainIssueDescriptionLabel: UILabel!
-    
-    // hey guys I know we have the skin analysis page but i think we should also display a small description of their issues/subissues also on the profile? lmk what you think
-    
-    // Can now update upon viewing the screen
-    // however it now updates everytime a screen is nav'd to
-    @IBAction func updateProfile()
-    {
-        //iModel.gender = "female"
-        print("Gender: " + "\(iModel.gender) dog")
-       // this works!
-        // we just need to get it to work with iModel.gender etc
-      //  print(sexLabel?.text!)
-        if let text = sexLabel?.text {
-            sexLabel.text = "gender"
-        }
-      //  print(ageLabel?.text!)
-        if let text = ageLabel?.text {
-            ageLabel.text = "years"
-        }
-      //  print(ageLabel?.text)
-        mainIssueLabel?.text = "main issue:   \(iModel.mainIssue)"
-        subIssueLabel?.text = "sub-issue:   \(iModel.subIssue)"
-        
-    }
-        
-        
+//    @IBOutlet weak var profileName: UILabel!
+//
+//    @IBOutlet weak var ageLabel: UILabel!
+//
+//    @IBOutlet weak var sexLabel: UILabel!
+//
+//    @IBOutlet weak var mainIssueLabel: UILabel!
+//
+//    @IBOutlet weak var subIssueLabel: UILabel!
+//
+//    @IBOutlet weak var mainIssueDescriptionLabel: UILabel!
+//
+//    // hey guys I know we have the skin analysis page but i think we should also display a small description of their issues/subissues also on the profile? lmk what you think
+//
+//    // Can now update upon viewing the screen
+//    // however it now updates everytime a screen is nav'd to
+//    @IBAction func updateProfile()
+//    {
+//        //iModel.gender = "female"
+//        print("Gender: " + "\(iModel.gender) dog")
+//       // this works!
+//        // we just need to get it to work with iModel.gender etc
+//      //  print(sexLabel?.text!)
+//        if let text = sexLabel?.text {
+//            sexLabel.text = "gender"
+//        }
+//      //  print(ageLabel?.text!)
+//        if let text = ageLabel?.text {
+//            ageLabel.text = "years"
+//        }
+//      //  print(ageLabel?.text)
+//        mainIssueLabel?.text = "main issue:   \(iModel.mainIssue)"
+//        subIssueLabel?.text = "sub-issue:   \(iModel.subIssue)"
+//
+//    }
+//
+//
         
     
 }
