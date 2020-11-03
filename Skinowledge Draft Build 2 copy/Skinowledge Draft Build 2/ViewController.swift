@@ -332,15 +332,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         print("Gender: " + "\(iModel.gender) dog")
        // this works!
         // we just need to get it to work with iModel.gender etc
-        print(sexLabel?.text!)
+      //  print(sexLabel?.text!)
         if let text = sexLabel?.text {
             sexLabel.text = "gender"
         }
-        print(ageLabel?.text!)
+      //  print(ageLabel?.text!)
         if let text = ageLabel?.text {
             ageLabel.text = "years"
         }
-        print(ageLabel?.text)
+      //  print(ageLabel?.text)
         mainIssueLabel?.text = "main issue:   \(iModel.mainIssue)"
         subIssueLabel?.text = "sub-issue:   \(iModel.subIssue)"
         

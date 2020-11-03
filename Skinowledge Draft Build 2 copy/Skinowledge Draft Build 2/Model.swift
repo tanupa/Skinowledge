@@ -27,7 +27,7 @@ extension Model{
     func createCSV(iModel: Model)
     {
         print(path)
-        var csvText = ""//"Age,Gender,Skin Type\n"
+        csvText = ""//"Age,Gender,Skin Type\n"
         let newLine = "\(iModel.age),\(iModel.gender), \(iModel.skinType)"//\n"
         csvText.append(newLine)
         //writing to the file
@@ -77,8 +77,13 @@ extension Model{
         //having issues, rewriting file over adding to it
         profile.append(mainIssue)
         print(profile)
-        let newLine = "\(iModel.mainIssue)"//\n"
+        var newLine = ""
+        for element in profile {
+            newLine += (element as! String) + ","
+        }
+        print(csvText)
         csvText.append(newLine)
+        print(csvText)
         //writing to the file
         do{
             try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
@@ -90,9 +95,31 @@ extension Model{
     
     func addSubIssue(iModel: Model)
      {
-         profile.append(subIssue)
          issues.append(subIssue)
          iModel.setInfo(iModel: iModel)
+        // how it works right now
+        // csv is Blank before adding first subissue for some reason
+        // this handles that and puts in the profile info
+        if (csvText == "")
+        {
+            var newLine = ""
+            for element in profile {
+            newLine += (element as! String) + ","
+            }
+            csvText.append(newLine)
+        }
+        // after that, it appends as normal
+        // verified that it doesn't do this after the 1st subissue has been added
+        csvText.append(subIssue + ",")
+        print(csvText)
+        profile.append(subIssue)
+        //writing to the file
+        do{
+            try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+        } catch {
+            print("Failed to create file")
+            print("\(error)")
+        }
      }
     
     func setInfo(iModel: Model)
@@ -119,16 +146,7 @@ extension Model{
                   iModel.subIngredients = ingredientList
               }
           }
-//          print("look")
-//          print(subIngredients[0])
           iModel.getProducts(ingredients: subIngredients[0])
-        
-          // ingredients:products map, products is its own array
-          
-  //        for issue in issues {
-  //
-  //        }
-          
       }
     
     /**
