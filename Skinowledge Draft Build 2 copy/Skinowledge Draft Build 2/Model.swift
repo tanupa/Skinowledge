@@ -13,6 +13,7 @@ var issues = [String]()
 let fileName = "Skin.csv"
 let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
 class Model{
+    var name = ""
     var age = ""
     var skinType = ""
     var gender = ""

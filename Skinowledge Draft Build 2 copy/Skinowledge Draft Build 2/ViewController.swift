@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelegate {
+class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelegate, UITextFieldDelegate {
     
 
     // removed all the UIDataPicker code
@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.updateProfile()
         
         /**
          This was supposed to be the scroll view, we can work on this later in the development process. I saved thew view controller, don't delete it.
@@ -92,19 +93,27 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         var pageNumber = scrollView.contentOffset.x/scrollView.frame.size.width
         pageControl.currentPage = Int(pageNumber)
     }
+ */
+    
     @IBAction func updateGender(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
         iModel.gender = titleValueString
         print(iModel.gender)
-    }*/
+    }
      
     /**
             Consolidated gender assignment functions into one function
      */
+    @IBOutlet weak var selectedAge: UILabel!
     
     // Next step: find way to put these all in the same method
     // tried to use the same method as updateGender, but it takes the words in as well
     // and we don't need that
+    
+//    @IBOutlet weak var ageField: UITextField!
+//    @IBAction func ageFieldUpdate(_ sender: Any) {
+//        ageField.delegate = self;
+//    }
     
     @IBAction func ageTeens(_ sender: Any) {
         iModel.age = "13-18"
@@ -298,6 +307,47 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         iModel.addSubIssue(iModel: iModel)
 //        iModel.addSkinIssue(issue: iModel.subIssue)
     }
+    
+    
+    
+    @IBOutlet weak var profileName: UILabel!
+
+    @IBOutlet weak var ageLabel: UILabel!
+
+    @IBOutlet weak var sexLabel: UILabel!
+
+    @IBOutlet weak var mainIssueLabel: UILabel!
+
+    @IBOutlet weak var subIssueLabel: UILabel!
+
+    @IBOutlet weak var mainIssueDescriptionLabel: UILabel!
+    
+    // hey guys I know we have the skin analysis page but i think we should also display a small description of their issues/subissues also on the profile? lmk what you think
+    
+    // Can now update upon viewing the screen
+    // however it now updates everytime a screen is nav'd to
+    @IBAction func updateProfile()
+    {
+        //iModel.gender = "female"
+        print("Gender: " + "\(iModel.gender) dog")
+       // this works!
+        // we just need to get it to work with iModel.gender etc
+        print(sexLabel?.text!)
+        if let text = sexLabel?.text {
+            sexLabel.text = "gender"
+        }
+        print(ageLabel?.text!)
+        if let text = ageLabel?.text {
+            ageLabel.text = "years"
+        }
+        print(ageLabel?.text)
+        mainIssueLabel?.text = "main issue:   \(iModel.mainIssue)"
+        subIssueLabel?.text = "sub-issue:   \(iModel.subIssue)"
+        
+    }
+        
+        
+        
     
 }
 
