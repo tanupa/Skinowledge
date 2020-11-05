@@ -7,22 +7,63 @@
 
 import UIKitgit
 
-class ViewController: UIViewController, UIPickerViewDelegate {
+class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelegate, UITextFieldDelegate {
     
+
     // removed all the UIDataPicker code
     
     var issue: String = ""
     var nextState = false
     
-    var pickerData: [String] = [String]()
+    var images:[String] = ["test1", "test2", "test3"]
+    
+    var frame = CGRect(x:0, y:0, width:0, height: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       // self.updateProfile()
+        
+        /**
+         This was supposed to be the scroll view, we can work on this later in the development process. I saved thew view controller, don't delete it.
+         */
+        /*if pageControl != nil {
+            print("Contains a value!")
+        } else {
+            print("Doesn’t contain a value.")
+        }
+        
+        
+        pageControl.numberOfPages = images.count
+        
+        
+        for index in 0..<images.count{
+            frame.origin.x = scrollView.frame.size.width * CGFloat(index)
+            frame.size = scrollView.frame.size
+            
+            let threeImages = UIImageView(frame: frame)
+            threeImages.image = UIImage(named: images[index])
+            self.scrollView.addSubview(threeImages)
+        }
+        scrollView.contentSize = CGSize(width: (scrollView.frame.size.width*CGFloat(images.count)), height: scrollView.frame.size.height)
+        scrollView.delegate = self*/
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     var iModel = Model()
     
     //Next step: find way to put this all in same method
+    
+    
+    
+    /*@IBOutlet weak var pageControl: UIPageControl!
+    
+    @IBOutlet weak var scrollView: UIScrollView!*/
+    
+    @IBOutlet weak var getStartedButton: UIButton!
+    
     @IBOutlet weak var male: UIButton!
     
     @IBOutlet weak var female: UIButton!
@@ -43,22 +84,41 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     @IBOutlet weak var submitButton: UIButton!
     
+    
     /**
-            Consolidated gender assignment functions into one function
+     For scroll view
      */
+    /*func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        var pageNumber = scrollView.contentOffset.x/scrollView.frame.size.width
+        pageControl.currentPage = Int(pageNumber)
+    }
+ */
+    
     @IBAction func updateGender(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
         iModel.gender = titleValueString
         print(iModel.gender)
     }
+     
+    /**
+            Consolidated gender assignment functions into one function
+     */
+    @IBOutlet weak var selectedAge: UILabel!
     
     // Next step: find way to put these all in the same method
     // tried to use the same method as updateGender, but it takes the words in as well
     // and we don't need that
     
+//    @IBOutlet weak var ageField: UITextField!
+//    @IBAction func ageFieldUpdate(_ sender: Any) {
+//        ageField.delegate = self;
+//    }
+    
     @IBAction func ageTeens(_ sender: Any) {
         iModel.age = "13-18"
         print(iModel.age)
+        
     }
     
     @IBAction func ageYA(_ sender: Any) {
@@ -237,7 +297,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         let titleValueString = sender.currentTitle!
         iModel.mainIssue = titleValueString
         print(iModel.mainIssue)
-        iModel.addSkinIssue(issue: iModel.mainIssue)
+        iModel.addSkinIssue(iModel: iModel)
     }
     
     // Subissue: accepts all subissues from all main issues
@@ -245,66 +305,52 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         let titleValueString = sender.currentTitle!
         iModel.subIssue = titleValueString
         print(iModel.subIssue)
-        iModel.addSkinIssue(issue: iModel.subIssue)
+        iModel.addSubIssue(iModel: iModel)
+//        iModel.addSkinIssue(issue: iModel.subIssue)
     }
     
-}
-
-//    @IBAction func massClickGreen(_ sender: Any) {
-//
-//        if!massButton.is
-//        if !massButton.isSelected {
-//            massButton.isSelected = true
-//            massButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-//            massButton.backgroundColor = UIColor.green
-//        }
-//        else {
-//            massButton.isSelected = false
-//            massButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
-//            massButton.backgroundColor = UIColor.systemBackground
-//    }
-
-//        @IBAction func Submit(_ sender: Any) {
-//            iModel.gender = Gender.text ?? "N/A"
-//            iModel.age = Int(Age.text ?? "0") ?? 0
-//            iModel.skinType = SkinType.text ?? "N/A"
-//            iModel.createCSV(iModel: iModel)
-//        }
-//        @IBOutlet weak var Gender: UITextField!
-//        @IBOutlet weak var Age: UITextField!
-//        @IBOutlet weak var SkinType: UITextField!
-//    @IBAction func acne(_ sender: UIButton) {
-//        issue = "Acne"
-//        iModel.mainIssue = issue;
-//        iModel.createCSV(iModel: iModel)
-//        print(issue)
-//    }
     
-//    @IBAction func showMessage1(sender: UIButton) {
+    
+//    @IBOutlet weak var profileName: UILabel!
 //
-//        let alertController = UIAlertController(title: "You selected \(issue)", message: "We will now pick your acne type", preferredStyle: UIAlertController.Style.alert)
-//        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//        present(alertController, animated: true, completion: nil)
+//    @IBOutlet weak var ageLabel: UILabel!
 //
+//    @IBOutlet weak var sexLabel: UILabel!
 //
-//        nextState = true
+//    @IBOutlet weak var mainIssueLabel: UILabel!
+//
+//    @IBOutlet weak var subIssueLabel: UILabel!
+//
+//    @IBOutlet weak var mainIssueDescriptionLabel: UILabel!
+//
+//    // hey guys I know we have the skin analysis page but i think we should also display a small description of their issues/subissues also on the profile? lmk what you think
+//
+//    // Can now update upon viewing the screen
+//    // however it now updates everytime a screen is nav'd to
+//    @IBAction func updateProfile()
+//    {
+//        //iModel.gender = "female"
+//        print("Gender: " + "\(iModel.gender) dog")
+//       // this works!
+//        // we just need to get it to work with iModel.gender etc
+//      //  print(sexLabel?.text!)
+//        if let text = sexLabel?.text {
+//            sexLabel.text = "gender"
+//        }
+//      //  print(ageLabel?.text!)
+//        if let text = ageLabel?.text {
+//            ageLabel.text = "years"
+//        }
+//      //  print(ageLabel?.text)
+//        mainIssueLabel?.text = "main issue:   \(iModel.mainIssue)"
+//        subIssueLabel?.text = "sub-issue:   \(iModel.subIssue)"
+//
 //    }
 //
-//    @IBAction func showMessage2(sender: UIButton) {
-//        issue = "Aging"
-//        iModel.mainIssue = issue;
-//        iModel.createCSV(iModel: iModel)
-//        print(issue)
 //
-//
-//        let alertController = UIAlertController(title: "You selected \(issue)", message: "Signs of aging are natural, but there are still ways to combat it.", preferredStyle: UIAlertController.Style.alert)
-//        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-//        present(alertController, animated: true, completion: nil)
-//
-//
-//        nextState = true
-//    }
-
+        
+    
+}
 
 
 
