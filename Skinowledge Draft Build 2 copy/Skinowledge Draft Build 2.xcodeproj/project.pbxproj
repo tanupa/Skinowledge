@@ -12,12 +12,11 @@
 		D588C9A42515C9B800990DBF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588C9A32515C9B800990DBF /* SceneDelegate.swift */; };
 		D588C9A62515C9B800990DBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588C9A52515C9B800990DBF /* ViewController.swift */; };
 		D588C9A92515C9B800990DBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D588C9A72515C9B800990DBF /* Main.storyboard */; };
-		D588C9AC2515C9B800990DBF /* Skinowledge_Draft_Build_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D588C9AA2515C9B800990DBF /* Skinowledge_Draft_Build_2.xcdatamodeld */; };
 		D588C9AE2515C9BD00990DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D588C9AD2515C9BD00990DBF /* Assets.xcassets */; };
 		D588C9B12515C9BD00990DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D588C9AF2515C9BD00990DBF /* LaunchScreen.storyboard */; };
-		D588C9BC2515C9BD00990DBF /* Skinowledge_Draft_Build_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588C9BB2515C9BD00990DBF /* Skinowledge_Draft_Build_2Tests.swift */; };
-		D588C9C72515C9BE00990DBF /* Skinowledge_Draft_Build_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588C9C62515C9BE00990DBF /* Skinowledge_Draft_Build_2UITests.swift */; };
 		D588C9D82516F10D00990DBF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588C9D72516F10D00990DBF /* Model.swift */; };
+		EB05D105255A0FC600F89D24 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB05D104255A0FC600F89D24 /* Results.swift */; };
+		EBFF51EB255488AB00021F53 /* DictionaryTest in Resources */ = {isa = PBXBuildFile; fileRef = EBFF51EA255488AB00021F53 /* DictionaryTest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,17 +43,14 @@
 		D588C9A32515C9B800990DBF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D588C9A52515C9B800990DBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D588C9A82515C9B800990DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D588C9AB2515C9B800990DBF /* Skinowledge_Draft_Build_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Skinowledge_Draft_Build_2.xcdatamodel; sourceTree = "<group>"; };
 		D588C9AD2515C9BD00990DBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D588C9B02515C9BD00990DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D588C9B22515C9BD00990DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D588C9B72515C9BD00990DBF /* Skinowledge Draft Build 2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Skinowledge Draft Build 2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D588C9BB2515C9BD00990DBF /* Skinowledge_Draft_Build_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skinowledge_Draft_Build_2Tests.swift; sourceTree = "<group>"; };
-		D588C9BD2515C9BD00990DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D588C9C22515C9BE00990DBF /* Skinowledge Draft Build 2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Skinowledge Draft Build 2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D588C9C62515C9BE00990DBF /* Skinowledge_Draft_Build_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skinowledge_Draft_Build_2UITests.swift; sourceTree = "<group>"; };
-		D588C9C82515C9BE00990DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D588C9D72516F10D00990DBF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EB05D104255A0FC600F89D24 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		EBFF51EA255488AB00021F53 /* DictionaryTest */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DictionaryTest; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				D588C9A02515C9B800990DBF /* Skinowledge Draft Build 2 */,
-				D588C9BA2515C9BD00990DBF /* Skinowledge Draft Build 2Tests */,
-				D588C9C52515C9BE00990DBF /* Skinowledge Draft Build 2UITests */,
 				D588C99F2515C9B800990DBF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,29 +106,12 @@
 				D588C9AD2515C9BD00990DBF /* Assets.xcassets */,
 				D588C9AF2515C9BD00990DBF /* LaunchScreen.storyboard */,
 				D588C9B22515C9BD00990DBF /* Info.plist */,
-				D588C9AA2515C9B800990DBF /* Skinowledge_Draft_Build_2.xcdatamodeld */,
 				D588C9D72516F10D00990DBF /* Model.swift */,
 				D54D4CCE255215DD00819204 /* ViewControllerProfile.swift */,
+				EBFF51EA255488AB00021F53 /* DictionaryTest */,
+				EB05D104255A0FC600F89D24 /* Results.swift */,
 			);
 			path = "Skinowledge Draft Build 2";
-			sourceTree = "<group>";
-		};
-		D588C9BA2515C9BD00990DBF /* Skinowledge Draft Build 2Tests */ = {
-			isa = PBXGroup;
-			children = (
-				D588C9BB2515C9BD00990DBF /* Skinowledge_Draft_Build_2Tests.swift */,
-				D588C9BD2515C9BD00990DBF /* Info.plist */,
-			);
-			path = "Skinowledge Draft Build 2Tests";
-			sourceTree = "<group>";
-		};
-		D588C9C52515C9BE00990DBF /* Skinowledge Draft Build 2UITests */ = {
-			isa = PBXGroup;
-			children = (
-				D588C9C62515C9BE00990DBF /* Skinowledge_Draft_Build_2UITests.swift */,
-				D588C9C82515C9BE00990DBF /* Info.plist */,
-			);
-			path = "Skinowledge Draft Build 2UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D588C9B12515C9BD00990DBF /* LaunchScreen.storyboard in Resources */,
+				EBFF51EB255488AB00021F53 /* DictionaryTest in Resources */,
 				D588C9AE2515C9BD00990DBF /* Assets.xcassets in Resources */,
 				D588C9A92515C9B800990DBF /* Main.storyboard in Resources */,
 			);
@@ -270,11 +248,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB05D105255A0FC600F89D24 /* Results.swift in Sources */,
 				D54D4CCF255215DD00819204 /* ViewControllerProfile.swift in Sources */,
 				D588C9D82516F10D00990DBF /* Model.swift in Sources */,
 				D588C9A62515C9B800990DBF /* ViewController.swift in Sources */,
 				D588C9A22515C9B800990DBF /* AppDelegate.swift in Sources */,
-				D588C9AC2515C9B800990DBF /* Skinowledge_Draft_Build_2.xcdatamodeld in Sources */,
 				D588C9A42515C9B800990DBF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +261,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D588C9BC2515C9BD00990DBF /* Skinowledge_Draft_Build_2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D588C9C72515C9BE00990DBF /* Skinowledge_Draft_Build_2UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,19 +580,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D588C9AA2515C9B800990DBF /* Skinowledge_Draft_Build_2.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D588C9AB2515C9B800990DBF /* Skinowledge_Draft_Build_2.xcdatamodel */,
-			);
-			currentVersion = D588C9AB2515C9B800990DBF /* Skinowledge_Draft_Build_2.xcdatamodel */;
-			path = Skinowledge_Draft_Build_2.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = D588C9962515C9B800990DBF /* Project object */;
 }
