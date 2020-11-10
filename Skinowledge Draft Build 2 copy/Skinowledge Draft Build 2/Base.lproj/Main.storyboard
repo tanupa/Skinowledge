@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="54H-S8-Vks">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,13 +19,19 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJL-fU-kqa" userLabel="start">
                                 <rect key="frame" x="167" y="565" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Get Started"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="lYX-DJ-zaa"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MzC-ck-ADK">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="504"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ASKINCARE" translatesAutoresizingMaskIntoConstraints="NO" id="MzC-ck-ADK">
+                                <rect key="frame" x="0.0" y="-46" width="414" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ASKIN" translatesAutoresizingMaskIntoConstraints="NO" id="KVW-Yf-fpc">
+                                <rect key="frame" x="78" y="354" width="240" height="189"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -91,18 +97,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74c-dZ-mYT">
-                                <rect key="frame" x="145" y="161.33333333333334" width="33" height="30"/>
+                                <rect key="frame" x="145" y="161.33333333333337" width="33" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Male"/>
+                                <state key="normal" title="Male">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonColorChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rva-BT-n1L"/>
                                     <action selector="updateGender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yzp-xg-IVo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGx-R2-dfw">
-                                <rect key="frame" x="217.66666666666666" y="161.33333333333334" width="50.333333333333343" height="30"/>
+                                <rect key="frame" x="218.66666666666663" y="161.33333333333337" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Female"/>
+                                <state key="normal" title="Female">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonColorChangeF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uKL-ty-BuB"/>
                                     <action selector="updateGender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pxr-SO-uxW"/>
@@ -122,15 +132,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Type age here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RVk-4Y-6yf">
-                                <rect key="frame" x="148" y="343.66666666666669" width="120" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="ageFieldUpdate:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="jwh-Ff-KyO"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some info about you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSl-Rw-6X1">
                                 <rect key="frame" x="124.00000000000001" y="70" width="157.33333333333337" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -148,7 +149,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7a-T2-XZ7">
                                 <rect key="frame" x="183" y="600" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="Submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n9l-gW-owJ"/>
                                     <action selector="submitButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0dJ-Wd-SQk"/>
@@ -158,7 +161,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPG-g8-xY7">
                                 <rect key="frame" x="134" y="242" width="147" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Teens (13-18)"/>
+                                <state key="normal" title="Teens (13-18)">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="ageTeens:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cNd-c7-rIf"/>
                                     <action selector="teenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RvM-Ta-yU1"/>
@@ -167,7 +172,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x74-GP-dlq">
                                 <rect key="frame" x="134" y="280" width="147" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Young Adults (18-30)"/>
+                                <state key="normal" title="Young Adults (18-30)">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="ageYA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2AK-6n-km2"/>
                                     <action selector="youngAdultsButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2l-Nk-heL"/>
@@ -176,7 +183,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYc-bO-isP">
                                 <rect key="frame" x="164" y="318" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Adults (30+)"/>
+                                <state key="normal" title="Adults (30+)">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="adultsButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSx-M1-kTM"/>
                                     <action selector="ageAdults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1f-tq-RXU"/>
@@ -185,7 +194,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wot-gI-lQr">
                                 <rect key="frame" x="164" y="414" width="87" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Dry"/>
+                                <state key="normal" title="Dry">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="dryButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5H-Et-vIK"/>
                                     <action selector="skinType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GrF-9X-Gt8"/>
@@ -194,7 +205,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKC-vW-pne">
                                 <rect key="frame" x="177" y="452" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Oily"/>
+                                <state key="normal" title="Oily">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="oilyButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJt-Ce-Rno"/>
                                     <action selector="skinType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qok-Dm-ivx"/>
@@ -203,7 +216,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBu-6N-pje">
                                 <rect key="frame" x="159" y="498" width="87" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Combination"/>
+                                <state key="normal" title="Combination">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="combinationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TWZ-b4-uD6"/>
                                     <action selector="skinType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibQ-lf-e3x"/>
@@ -212,7 +227,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsG-I5-kVb">
                                 <rect key="frame" x="177" y="536" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sensitive"/>
+                                <state key="normal" title="Sensitive">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="sensitiveButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Act-aY-Zgq"/>
                                     <action selector="skinType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QWC-rN-iKF"/>
@@ -545,7 +562,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmV-Y5-V4t">
                                 <rect key="frame" x="187" y="268" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Aging"/>
+                                <state key="normal" title="Aging">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="issue:" destination="V3A-tu-hv3" eventType="touchUpInside" id="Kw4-33-nSz"/>
                                     <segue destination="MwO-2G-j7E" kind="show" id="4zv-xi-Vru"/>
@@ -554,7 +573,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GC7-0M-Iz3">
                                 <rect key="frame" x="169" y="221" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Acne Scars"/>
+                                <state key="normal" title="Acne Scars">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="issue:" destination="V3A-tu-hv3" eventType="touchUpInside" id="MiY-uK-Xo5"/>
                                     <segue destination="7Pt-CA-lh4" kind="show" id="oSM-mL-sEH"/>
@@ -563,7 +584,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwA-JT-XkR">
                                 <rect key="frame" x="162" y="322" width="91" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Discoloration"/>
+                                <state key="normal" title="Discoloration">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="issue:" destination="V3A-tu-hv3" eventType="touchUpInside" id="qxJ-0j-hDa"/>
                                     <segue destination="UhJ-zx-Il0" kind="show" id="2hw-O7-aSi"/>
@@ -572,7 +595,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8n-A1-7Fk">
                                 <rect key="frame" x="163" y="376" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sun Damage"/>
+                                <state key="normal" title="Sun Damage">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="issue:" destination="V3A-tu-hv3" eventType="touchUpInside" id="OJr-Pm-alv"/>
                                     <segue destination="MdX-S8-Zf9" kind="show" id="RV2-1M-EYq"/>
@@ -581,7 +606,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTT-Q3-YIS">
                                 <rect key="frame" x="187" y="165" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Acne"/>
+                                <state key="normal" title="Acne">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="issue:" destination="V3A-tu-hv3" eventType="touchUpInside" id="RCS-9y-RWE"/>
                                     <segue destination="G7A-e0-0NN" kind="show" id="Wi4-xq-fAE"/>
@@ -624,10 +651,33 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acf-gT-Qz2">
                                 <rect key="frame" x="165" y="129" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Glow Recipe"/>
+                                <state key="normal" title="Glow Recipe">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="hx2-Xu-JGd" kind="show" id="YiP-6i-y9a"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zs-nC-McH">
+                                <rect key="frame" x="162" y="217" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="The Ordinary">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEa-C7-pBP">
+                                <rect key="frame" x="192" y="306" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ulta">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0j-U9-Jkz">
+                                <rect key="frame" x="178" y="413" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sephora">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0gh-ls-1pC"/>
@@ -810,7 +860,7 @@
             <objects>
                 <viewController id="RFb-3X-XaU" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sh5-Gn-xAZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GZn-Kl-78w">
@@ -883,7 +933,7 @@
             <objects>
                 <viewController id="33r-d7-DDE" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rlt-LN-tPK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpx-mZ-VjH">
@@ -976,7 +1026,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaC-PX-SvU">
                                 <rect key="frame" x="186" y="153" width="43" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cystic"/>
+                                <state key="normal" title="Cystic">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="cysticIssue:" destination="2vq-Hx-aft" eventType="touchUpInside" id="yhV-0q-MNU"/>
                                     <action selector="subIssue:" destination="G7A-e0-0NN" eventType="touchUpInside" id="ifZ-FM-Ca5"/>
@@ -985,7 +1037,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-51-dr9">
                                 <rect key="frame" x="169" y="206" width="79" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Blackheads"/>
+                                <state key="normal" title="Blackheads">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="subIssue:" destination="G7A-e0-0NN" eventType="touchUpInside" id="pA0-TA-tpt"/>
                                 </connections>
@@ -993,7 +1047,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVj-s5-zqa">
                                 <rect key="frame" x="166" y="267" width="82" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Whiteheads"/>
+                                <state key="normal" title="Whiteheads">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="subIssue:" destination="G7A-e0-0NN" eventType="touchUpInside" id="abC-7p-BN4"/>
                                 </connections>
@@ -1001,7 +1057,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ias-za-37h">
                                 <rect key="frame" x="179" y="330" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Papules"/>
+                                <state key="normal" title="Papules">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="subIssue:" destination="G7A-e0-0NN" eventType="touchUpInside" id="GcJ-5C-2cW"/>
                                 </connections>
@@ -1009,7 +1067,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91U-wf-QOz">
                                 <rect key="frame" x="177" y="389" width="59" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pustules"/>
+                                <state key="normal" title="Pustules">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
                                 <connections>
                                     <action selector="subIssue:" destination="G7A-e0-0NN" eventType="touchUpInside" id="xon-FX-ioB"/>
                                 </connections>
@@ -1039,8 +1099,16 @@
         <segue reference="cLA-dj-Uw5"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="ASKIN" width="600" height="600"/>
+        <image name="ASKINCARE" width="4496" height="2682"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
