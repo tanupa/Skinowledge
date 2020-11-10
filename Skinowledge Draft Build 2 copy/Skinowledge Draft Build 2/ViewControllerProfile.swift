@@ -7,13 +7,12 @@
 
 import UIKit
 
-class ViewControllerProfile: UIViewController, UIPickerViewDelegate, UIScrollViewDelegate, UITextFieldDelegate {
+class ViewControllerProfile:  ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateProfile()
     }
-    var iModel = Model()
     @IBOutlet weak var profileName: UILabel!
 
     @IBOutlet weak var ageLabel: UILabel!
