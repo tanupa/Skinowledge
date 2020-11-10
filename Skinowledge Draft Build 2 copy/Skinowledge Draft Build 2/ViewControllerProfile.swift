@@ -32,8 +32,10 @@ class ViewControllerProfile:  ViewController {
     @IBAction func updateProfile()
     {
         //iModel.gender = "female"
-        print("Gender: " + "\(iModel.gender) dog")
-       // this works!
+        
+        //print("Gender: " + "\(iModel.gender)")
+       
+        // this works!
         // we just need to get it to work with iModel.gender etc
       //  print(sexLabel?.text!)
         if let text = sexLabel?.text {
@@ -48,6 +50,5 @@ class ViewControllerProfile:  ViewController {
         subIssueLabel?.text = "sub-issue:   \(iModel.subIssue)"
         
     }
-        
         
 }

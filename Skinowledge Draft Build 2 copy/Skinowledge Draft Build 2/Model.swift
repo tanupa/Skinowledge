@@ -21,6 +21,7 @@ class Model{
     var subIssue = ""
     var csvText = ""//"Age,Gender,Skin Type\n"
     var subIngredients: [String] = []
+    var descriptionResults = ""
 }
 extension Model{
     
@@ -55,6 +56,8 @@ extension Model{
           })
         print(parseFile)
         
+        
+        
         /**
                 Adding existing data into Profile array
                 Following: Age, Gender, Skin type
@@ -65,7 +68,7 @@ extension Model{
         profile.append(iModel.skinType)
         
         // change this in the future
-       // getProducts(ingredients: "mandelic acid")
+       //getProducts(ingredients: "mandelic acid")
     }
 
     
@@ -146,8 +149,12 @@ extension Model{
                   iModel.subIngredients = ingredientList
               }
           }
+        
+        
           iModel.getProducts(ingredients: subIngredients[0])
+        
       }
+    
     
     /**
      2. setInfo- takes in array of the user, goes through every single button they clicked and runs getProducts()
@@ -184,18 +191,4 @@ extension Model{
 }
 
 
-
-/**
- was supposed to prevent duplication but failed
- */
-/*let fileManger = FileManager.default
-let doumentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-let filePath = doumentDirectoryPath.appendingPathComponent("Skin.csv")
-if fileManger.fileExists(atPath: filePath){
-    do{
-        try fileManger.removeItem(atPath: filePath)
-    }catch let error {
-        print("error occurred, here are the details:\n \(error)")
-    }
-}*/
 

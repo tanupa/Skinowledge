@@ -21,7 +21,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        /*let resultCSV = Bundle.main.path(forResource: "DictionaryTest", ofType: "csv")
+        resultCSV = cleanRows(file: data!)
+        let resultCSV = csv(data: data!)
+        print(csvRows[1][1])*/ // UXM n. 166/167
        // self.updateProfile()
+        
         
         /**
          This was supposed to be the scroll view, we can work on this later in the development process. I saved thew view controller, don't delete it.
