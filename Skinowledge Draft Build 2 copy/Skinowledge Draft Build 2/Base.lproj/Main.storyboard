@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="54H-S8-Vks">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -517,7 +517,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0f-Gb-y7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2026" y="792"/>
+            <point key="canvasLocation" x="1714" y="801"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="f9N-HM-hoR">
@@ -611,16 +611,13 @@
                                 </state>
                                 <connections>
                                     <action selector="issue:" destination="V3A-tu-hv3" eventType="touchUpInside" id="RCS-9y-RWE"/>
-                                    <segue destination="G7A-e0-0NN" kind="show" id="Wi4-xq-fAE"/>
+                                    <segue destination="G7A-e0-0NN" kind="show" id="9nV-Kl-qI3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-2v-dnn">
                                 <rect key="frame" x="183" y="588" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
-                                <connections>
-                                    <segue destination="Fia-OR-nmf" kind="show" id="dBv-sH-0BD"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VCz-L5-NPp"/>
@@ -636,93 +633,131 @@
         <!--View Controller-->
         <scene sceneID="UwV-k1-Uro">
             <objects>
-                <viewController id="Fia-OR-nmf" sceneMemberID="viewController">
+                <viewController id="Fia-OR-nmf" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0fo-fG-OiE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ud-1D-cZn">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Which store?" id="0Cv-9D-c9g"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acf-gT-Qz2">
-                                <rect key="frame" x="165" y="129" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Glow Recipe">
-                                    <color key="titleColor" systemColor="systemIndigoColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hx2-Xu-JGd" kind="show" id="YiP-6i-y9a"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zs-nC-McH">
-                                <rect key="frame" x="162" y="217" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="The Ordinary">
-                                    <color key="titleColor" systemColor="systemIndigoColor"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEa-C7-pBP">
-                                <rect key="frame" x="192" y="306" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Ulta">
-                                    <color key="titleColor" systemColor="systemIndigoColor"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0j-U9-Jkz">
-                                <rect key="frame" x="178" y="413" width="58" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sephora">
-                                    <color key="titleColor" systemColor="systemIndigoColor"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GdI-CW-VHq">
+                                <rect key="frame" x="0.0" y="20" width="414" height="39"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cb-Wo-AXP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <state key="normal" title="Which store?">
+                                            <color key="titleColor" systemColor="systemYellowColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selection:" destination="Fia-OR-nmf" eventType="touchUpInside" id="Akk-kH-pde"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acf-gT-Qz2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Glow Recipe">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="glowRecipeClick:" destination="Fia-OR-nmf" eventType="touchUpInside" id="XSG-Ir-7bj"/>
+                                            <action selector="massClicked:" destination="Fia-OR-nmf" eventType="touchUpInside" id="R6w-wV-sNr"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEa-C7-pBP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Ulta">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="massClicked:" destination="Fia-OR-nmf" eventType="touchUpInside" id="U2K-1J-WLl"/>
+                                            <action selector="ultaClick:" destination="Fia-OR-nmf" eventType="touchUpInside" id="c9A-6G-8Ql"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0j-U9-Jkz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Sephora">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="massClicked:" destination="Fia-OR-nmf" eventType="touchUpInside" id="IFS-gF-tvO"/>
+                                            <action selector="sephoraClick:" destination="Fia-OR-nmf" eventType="touchUpInside" id="w0z-ca-hkn"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7s-yI-9g6">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="The Inkey List">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inkeyListClick:" destination="Fia-OR-nmf" eventType="touchUpInside" id="ywC-NC-ssZ"/>
+                                            <action selector="massClicked:" destination="Fia-OR-nmf" eventType="touchUpInside" id="QRw-IP-mOm"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbQ-Fc-WSR">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="The Ordinary">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="massClicked:" destination="Fia-OR-nmf" eventType="touchUpInside" id="4Eh-wy-Wo9"/>
+                                            <action selector="ordinaryClick:" destination="Fia-OR-nmf" eventType="touchUpInside" id="eIn-sv-w42"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muj-JJ-CuE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="VaniCream">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="massClicked:" destination="Fia-OR-nmf" eventType="touchUpInside" id="XE3-rS-RKi"/>
+                                            <action selector="vaniCreamClick:" destination="Fia-OR-nmf" eventType="touchUpInside" id="Pze-Ps-QvA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="V8m-ZF-6RB"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0gh-ls-1pC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GdI-CW-VHq" firstAttribute="leading" secondItem="0gh-ls-1pC" secondAttribute="leading" id="66m-1c-85T"/>
+                            <constraint firstItem="0gh-ls-1pC" firstAttribute="trailing" secondItem="GdI-CW-VHq" secondAttribute="trailing" id="Bza-7v-ScB"/>
+                            <constraint firstItem="GdI-CW-VHq" firstAttribute="top" secondItem="0gh-ls-1pC" secondAttribute="top" constant="10" id="cmO-ap-3eO"/>
+                            <constraint firstItem="GdI-CW-VHq" firstAttribute="top" secondItem="0gh-ls-1pC" secondAttribute="top" constant="20" id="puy-nC-yEZ"/>
+                            <constraint firstItem="0gh-ls-1pC" firstAttribute="bottom" secondItem="GdI-CW-VHq" secondAttribute="bottom" constant="424" id="wXl-M5-fbV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oLL-wI-743"/>
+                    <connections>
+                        <outlet property="glowRecipe" destination="acf-gT-Qz2" id="m7U-JF-baO"/>
+                        <outlet property="inkeyList" destination="a7s-yI-9g6" id="s6G-3W-GsY"/>
+                        <outlet property="ordinary" destination="HbQ-Fc-WSR" id="8zI-Yj-ORC"/>
+                        <outlet property="sephora" destination="J0j-U9-Jkz" id="g0z-9L-MUS"/>
+                        <outlet property="ulta" destination="BEa-C7-pBP" id="Nz9-oM-hTV"/>
+                        <outlet property="vaniCream" destination="Muj-JJ-CuE" id="16M-Ia-nkD"/>
+                        <outletCollection property="buttonCollection" destination="acf-gT-Qz2" collectionClass="NSMutableArray" id="BPh-II-rRz"/>
+                        <outletCollection property="buttonCollection" destination="BEa-C7-pBP" collectionClass="NSMutableArray" id="z0y-aE-ckr"/>
+                        <outletCollection property="buttonCollection" destination="J0j-U9-Jkz" collectionClass="NSMutableArray" id="hc6-2D-uD9"/>
+                        <outletCollection property="buttonCollection" destination="a7s-yI-9g6" collectionClass="NSMutableArray" id="V01-fd-L6E"/>
+                        <outletCollection property="buttonCollection" destination="HbQ-Fc-WSR" collectionClass="NSMutableArray" id="3w7-Yp-wFC"/>
+                        <outletCollection property="buttonCollection" destination="Muj-JJ-CuE" collectionClass="NSMutableArray" id="zDk-6d-X1w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZF-jM-rRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1242" y="91"/>
-        </scene>
-        <!--Results-->
-        <scene sceneID="ohW-x1-A7T">
-            <objects>
-                <viewController id="hx2-Xu-JGd" customClass="Results" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tuu-ma-06d">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s9n-X3-2Jd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Results" id="8iL-In-aZn"/>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ResultsLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9o-8e-qXT">
-                                <rect key="frame" x="84" y="144" width="166" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="FUN-wY-8gW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Kbt-KP-7IY"/>
-                    <connections>
-                        <outlet property="resultsLabel" destination="b9o-8e-qXT" id="1Wv-Fx-s8O"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yfM-gU-Bqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2024.6376811594205" y="89.673913043478265"/>
+            <point key="canvasLocation" x="2259" y="-832"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="X2O-0b-FQK">
@@ -853,153 +888,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOE-Mu-tKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1242.0289855072465" y="-644.19642857142856"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="90L-AD-aCm">
-            <objects>
-                <viewController id="RFb-3X-XaU" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sh5-Gn-xAZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GZn-Kl-78w">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="You selected: Acne" id="E52-T6-6a4"/>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What type of acne?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T43-UC-RFp">
-                                <rect key="frame" x="133" y="90" width="148" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKe-TZ-VyE">
-                                <rect key="frame" x="186" y="153" width="43" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cystic"/>
-                                <connections>
-                                    <action selector="cysticIssue:" destination="2vq-Hx-aft" eventType="touchUpInside" id="acQ-8l-mri"/>
-                                    <action selector="subIssue:" destination="RFb-3X-XaU" eventType="touchUpInside" id="eh8-ic-l9t"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kle-E5-c68">
-                                <rect key="frame" x="169" y="206" width="79" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Blackheads"/>
-                                <connections>
-                                    <action selector="subIssue:" destination="RFb-3X-XaU" eventType="touchUpInside" id="j8X-69-8wL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6g-uL-L6j">
-                                <rect key="frame" x="166" y="267" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Whiteheads"/>
-                                <connections>
-                                    <action selector="subIssue:" destination="RFb-3X-XaU" eventType="touchUpInside" id="gGw-qU-baw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ube-1P-pxq">
-                                <rect key="frame" x="179" y="330" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Papules"/>
-                                <connections>
-                                    <action selector="subIssue:" destination="RFb-3X-XaU" eventType="touchUpInside" id="68a-jv-tQk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QnY-jJ-jyG">
-                                <rect key="frame" x="177" y="389" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pustules"/>
-                                <connections>
-                                    <action selector="subIssue:" destination="RFb-3X-XaU" eventType="touchUpInside" id="fcQ-Cd-kw6"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Uac-9F-wy7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="t2p-gt-Wrq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fYf-eU-M2s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="406" y="-644"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="nA4-qP-Amc">
-            <objects>
-                <viewController id="33r-d7-DDE" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rlt-LN-tPK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpx-mZ-VjH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="You selected: Acne" id="ZyA-vN-sle"/>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What type of acne?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-uL-gkW">
-                                <rect key="frame" x="133" y="90" width="148" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1P-mY-bGe">
-                                <rect key="frame" x="186" y="153" width="43" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cystic"/>
-                                <connections>
-                                    <action selector="cysticIssue:" destination="2vq-Hx-aft" eventType="touchUpInside" id="jph-bD-n65"/>
-                                    <action selector="subIssue:" destination="33r-d7-DDE" eventType="touchUpInside" id="EZx-Kd-so8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s8-9a-98q">
-                                <rect key="frame" x="169" y="206" width="79" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Blackheads"/>
-                                <connections>
-                                    <action selector="subIssue:" destination="33r-d7-DDE" eventType="touchUpInside" id="4px-HY-gHc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45E-jM-PME">
-                                <rect key="frame" x="166" y="267" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Whiteheads"/>
-                                <connections>
-                                    <action selector="subIssue:" destination="33r-d7-DDE" eventType="touchUpInside" id="bNx-mW-QKj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ph-kb-duK">
-                                <rect key="frame" x="179" y="330" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Papules"/>
-                                <connections>
-                                    <action selector="subIssue:" destination="33r-d7-DDE" eventType="touchUpInside" id="RnX-MO-vuN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agc-zc-RcN">
-                                <rect key="frame" x="177" y="389" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pustules"/>
-                                <connections>
-                                    <action selector="subIssue:" destination="33r-d7-DDE" eventType="touchUpInside" id="rwk-ee-Lib"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="cu6-m2-OsD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="rZW-Ce-XFw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u7w-v9-mTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="406" y="-644"/>
+            <point key="canvasLocation" x="1212" y="75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="46h-5p-l9Y">
@@ -1032,6 +921,7 @@
                                 <connections>
                                     <action selector="cysticIssue:" destination="2vq-Hx-aft" eventType="touchUpInside" id="yhV-0q-MNU"/>
                                     <action selector="subIssue:" destination="G7A-e0-0NN" eventType="touchUpInside" id="ifZ-FM-Ca5"/>
+                                    <segue destination="Fia-OR-nmf" kind="show" id="aM0-Tr-ba7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-51-dr9">
@@ -1091,7 +981,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fU6-Bl-UGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="2vq-Hx-aft" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="406" y="-644"/>
+            <point key="canvasLocation" x="987" y="-831"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

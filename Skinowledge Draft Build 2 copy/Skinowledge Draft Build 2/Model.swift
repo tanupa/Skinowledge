@@ -40,7 +40,8 @@ extension Model{
         }
         
     /**
-         parsing the CSV into an array that can be of any data type#imageLiteral(resourceName: "simulator_screenshot_89B1D6B8-AB34-48ED-9780-D293E21854A0.png")
+         parsing the CSV into an array that can be of any data
+         Code tutorial reference: http://blog.alsedi.com/one-line-csv-parser-with-swift-the-power-of-swift/
     */
         let parseFile: [[CustomStringConvertible]] = csvText
           .components(separatedBy: "\n")
@@ -151,42 +152,9 @@ extension Model{
           }
         
         
-          iModel.getProducts(ingredients: subIngredients[0])
+          /*iModel.getProducts(ingredients: subIngredients[0])*/
         
       }
-    
-    
-    /**
-     2. setInfo- takes in array of the user, goes through every single button they clicked and runs getProducts()
-     */
-    
-    /*func setInfo()
-    {
-        //var dictionary: [String: String] = ["Hyperpigmentation": "Mandelic Acid Product", "Hyperpigmentation": //"Azelic Acid Product", "Hyperpigmentation": "Tranexamic Acid"]
-        //getProducts(ingredients: "Mandelic Acid")
-       // getProducts(ingredients: "Azelic Acid")
-       // getProducts(ingredients: "Tranexamic Acid")
-    }*/
-    
-    /*
-     3. find products, prints out 3 ingredients and displays the products
-     */
-    
-    func getProducts(ingredients: String)
-    {
-        var query = ingredients
-        query = query.replacingOccurrences(of: " ", with: "%20")
-      //  let url = "https://www.sephora.com/?keyword=" + query
-        //UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
-        
-        guard let url = URL(string: "https://www.sephora.com/search?keyword=" + query) else { return }
-        UIApplication.shared.open(url)
-        
-//        [[NSWorkspace, sharedWorkspace], openURL,: [NSURL URLWithString:@"https://www.sephora.com/?keyword=" + query]];
-        /*
-        search it up on google, bring back links
- */
-    }
     
 }
 

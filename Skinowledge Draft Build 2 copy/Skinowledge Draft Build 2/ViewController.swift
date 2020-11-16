@@ -21,37 +21,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        /*let resultCSV = Bundle.main.path(forResource: "DictionaryTest", ofType: "csv")
-        resultCSV = cleanRows(file: data!)
-        let resultCSV = csv(data: data!)
-        print(csvRows[1][1])*/ // UXM n. 166/167
-       // self.updateProfile()
-        
-        
-        /**
-         This was supposed to be the scroll view, we can work on this later in the development process. I saved thew view controller, don't delete it.
-         */
-        /*if pageControl != nil {
-            print("Contains a value!")
-        } else {
-            print("Doesn’t contain a value.")
-        }
-        
-        
-        pageControl.numberOfPages = images.count
-        
-        
-        for index in 0..<images.count{
-            frame.origin.x = scrollView.frame.size.width * CGFloat(index)
-            frame.size = scrollView.frame.size
-            
-            let threeImages = UIImageView(frame: frame)
-            threeImages.image = UIImage(named: images[index])
-            self.scrollView.addSubview(threeImages)
-        }
-        scrollView.contentSize = CGSize(width: (scrollView.frame.size.width*CGFloat(images.count)), height: scrollView.frame.size.height)
-        scrollView.delegate = self*/
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,14 +28,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     }
     
     var iModel = Model()
-    
-    //Next step: find way to put this all in same method
-    
-    
-    
-    /*@IBOutlet weak var pageControl: UIPageControl!
-    
-    @IBOutlet weak var scrollView: UIScrollView!*/
     
     @IBOutlet weak var getStartedButton: UIButton!
     
@@ -91,16 +52,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     @IBOutlet weak var submitButton: UIButton!
     
     
-    /**
-     For scroll view
-     */
-    /*func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
-        var pageNumber = scrollView.contentOffset.x/scrollView.frame.size.width
-        pageControl.currentPage = Int(pageNumber)
-    }
- */
-    
     @IBAction func updateGender(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
         iModel.gender = titleValueString
@@ -111,15 +62,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
             Consolidated gender assignment functions into one function
      */
     @IBOutlet weak var selectedAge: UILabel!
-    
-    // Next step: find way to put these all in the same method
-    // tried to use the same method as updateGender, but it takes the words in as well
-    // and we don't need that
-    
-//    @IBOutlet weak var ageField: UITextField!
-//    @IBAction func ageFieldUpdate(_ sender: Any) {
-//        ageField.delegate = self;
-//    }
     
     @IBAction func ageTeens(_ sender: Any) {
         iModel.age = "13-18"
@@ -152,6 +94,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     }
     
     /**These funcs below will change the color of the button to green when pressed, and regular color when delesected
+     Code tutorial reference: https://stackoverflow.com/questions/31372684/swift-change-a-button-color-once-pressed
      **/
 
     @IBAction func buttonColorChange(_ sender: Any) {
@@ -169,6 +112,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         //Male.tintColor = UIColor.green
     }
     
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/31372684/swift-change-a-button-color-once-pressed
+     */
     @IBAction func buttonColorChangeF(_ sender: Any) {
         if !female.isSelected {
             female.isSelected = true
@@ -183,6 +129,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         //Female.tintColor = UIColor.green
     }
     
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/31372684/swift-change-a-button-color-once-pressed
+     */
     @IBAction func teenButtonAction(_ sender: Any) {
         
         if !teensButton.isSelected {
@@ -197,6 +146,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         }
     }
     
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/31372684/swift-change-a-button-color-once-pressed
+     */
     @IBAction func youngAdultsButtonAction(_ sender: Any) {
         
         if !youngAdultsButton.isSelected {
@@ -211,6 +163,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         }
     }
     
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/31372684/swift-change-a-button-color-once-pressed
+     */
     @IBAction func adultsButtonAction(_ sender: Any) {
         if !adultsButton.isSelected {
             adultsButton.isSelected = true
@@ -225,7 +180,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     }
     
     /**
-        There are errors in the dominant skin type selection that I will have to address later
+     Code tutorial reference: https://stackoverflow.com/questions/31372684/swift-change-a-button-color-once-pressed
      */
     @IBAction func dryButtonAction(_ sender: Any) {
        
@@ -242,6 +197,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     
     }
     
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/31372684/swift-change-a-button-color-once-pressed
+     */
     @IBAction func oilyButtonAction(_ sender: Any) {
         
         if !oilButton.isSelected {
@@ -256,7 +214,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         }
     }
 
-    
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/31372684/swift-change-a-button-color-once-pressed
+     */
     @IBAction func combinationButtonAction(_ sender: Any) {
         
         if !combinationButton.isSelected {
@@ -271,6 +231,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         }
     }
     
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/31372684/swift-change-a-button-color-once-pressed
+     */
     @IBAction func sensitiveButtonAction(_ sender: Any) {
         
         if !sensitiveButton.isSelected {
@@ -285,6 +248,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         }
     }
     
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/31372684/swift-change-a-button-color-once-pressed
+     */
     @IBAction func submitButtonAction(_ sender: Any) {
         
         if !submitButton.isSelected {
@@ -315,46 +281,103 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
 //        iModel.addSkinIssue(issue: iModel.subIssue)
     }
     
-    
-    
-//    @IBOutlet weak var profileName: UILabel!
-//
-//    @IBOutlet weak var ageLabel: UILabel!
-//
-//    @IBOutlet weak var sexLabel: UILabel!
-//
-//    @IBOutlet weak var mainIssueLabel: UILabel!
-//
-//    @IBOutlet weak var subIssueLabel: UILabel!
-//
-//    @IBOutlet weak var mainIssueDescriptionLabel: UILabel!
-//
-//    // hey guys I know we have the skin analysis page but i think we should also display a small description of their issues/subissues also on the profile? lmk what you think
-//
-//    // Can now update upon viewing the screen
-//    // however it now updates everytime a screen is nav'd to
-//    @IBAction func updateProfile()
-//    {
-//        //iModel.gender = "female"
-//        print("Gender: " + "\(iModel.gender) dog")
-//       // this works!
-//        // we just need to get it to work with iModel.gender etc
-//      //  print(sexLabel?.text!)
-//        if let text = sexLabel?.text {
-//            sexLabel.text = "gender"
-//        }
-//      //  print(ageLabel?.text!)
-//        if let text = ageLabel?.text {
-//            ageLabel.text = "years"
-//        }
-//      //  print(ageLabel?.text)
-//        mainIssueLabel?.text = "main issue:   \(iModel.mainIssue)"
-//        subIssueLabel?.text = "sub-issue:   \(iModel.subIssue)"
-//
-//    }
-//
-//
+    /**
+     Code Tutorial Reference: https://www.youtube.com/watch?v=dIKK-SCkh_c&t=384s&ab_channel=GaryTokman
+     */
+    @IBAction func selection(_ sender: UIButton) {
+        buttonCollection.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations:{
+            button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+        }
         
+    }
+    
+    @IBOutlet var buttonCollection: [UIButton]!
+    
+    @IBAction func massClicked(_ sender: UIButton) {
+    }
+        
+    @IBOutlet weak var glowRecipe: UIButton!
+    
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/25945324/swift-open-link-in-safari
+     */
+    @IBAction func glowRecipeClick(_ sender: UIButton) {
+        
+        var query = "Salicylic Acid"
+        query = query.replacingOccurrences(of: " ", with: "+")
+        
+        guard let url = URL(string: "https://www.glowrecipe.com/search?q=" + query) else { return }
+        UIApplication.shared.open(url)
+    }
+    
+    @IBOutlet weak var ulta: UIButton!
+    
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/25945324/swift-open-link-in-safari
+     */
+    @IBAction func ultaClick(_ sender: UIButton) {
+        
+        var query = "Salicylic Acid"
+        query = query.replacingOccurrences(of: " ", with: "%20")
+        
+        guard let url = URL(string: "https://www.ulta.com/ulta/a/_/Ntt-" + query + "/Nty-1?Dy=1&ciSelector=searchResults") else { return }
+        UIApplication.shared.open(url)
+    }
+    
+    @IBOutlet weak var sephora: UIButton!
+    
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/25945324/swift-open-link-in-safari
+     */
+    @IBAction func sephoraClick(_ sender: UIButton) {
+        var query = "Salicylic Acid"
+        query = query.replacingOccurrences(of: " ", with: "%20")
+        
+        guard let url = URL(string: "https://www.sephora.com/search?keyword=" + query) else { return }
+        UIApplication.shared.open(url)
+    
+    }
+    
+    @IBOutlet weak var inkeyList: UIButton!
+    
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/25945324/swift-open-link-in-safari
+     */
+    @IBAction func inkeyListClick(_ sender: UIButton){
+        var query = "Salicylic Acid"
+        query = query.replacingOccurrences(of: " ", with: "+")
+        
+        guard let url = URL(string: "https://www.theinkeylist.com/search?q=" + query + "&type=product") else { return }
+        UIApplication.shared.open(url)
+    }
+    
+    @IBOutlet weak var ordinary: UIButton!
+    
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/25945324/swift-open-link-in-safari
+     */
+    @IBAction func ordinaryClick(_ sender: UIButton) {
+        var query = "salicylic acid"
+        query = query.replacingOccurrences(of: " ", with: "-")
+        
+        guard let url = URL(string: "https://www.sephora.com/product/the-ordinary-" + query + "-2-masque-P448530?om_mmc=ppc-GG_1380515476_53324488525_aud-310433652370:dsa-414040944380__385421813501_9061320_c&country_switch=us&lang=en&gclid=Cj0KCQiA48j9BRC-ARIsAMQu3WQ6BEng7F9HKg3lofBxjRaM4xGicV0UT-HL9uieYeNRm4eUCveQUqcaAkrWEALw_wcB&gclsrc=aw.ds") else { return }
+        UIApplication.shared.open(url)
+    
+    }
+    
+    @IBOutlet weak var vaniCream: UIButton!
+    
+    /**
+     Code tutorial reference: https://stackoverflow.com/questions/25945324/swift-open-link-in-safari
+     */
+    @IBAction func vaniCreamClick(_ sender: UIButton){
+        
+        guard let url = URL(string: "https://www.amazon.com/Vanicream-Gentle-Cleanser-sensitive-Dispenser/dp/B00QY1XZ4W") else { return }
+        UIApplication.shared.open(url)
+    }
     
 }
 

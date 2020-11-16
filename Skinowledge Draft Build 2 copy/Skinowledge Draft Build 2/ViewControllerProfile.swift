@@ -25,7 +25,6 @@ class ViewControllerProfile:  ViewController {
 
     @IBOutlet weak var mainIssueDescriptionLabel: UILabel!
     
-    // hey guys I know we have the skin analysis page but i think we should also display a small description of their issues/subissues also on the profile? lmk what you think
     
     // Can now update upon viewing the screen
     // however it now updates everytime a screen is nav'd to
