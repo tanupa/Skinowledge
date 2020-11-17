@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func didReceiveMemoryWarning() {
