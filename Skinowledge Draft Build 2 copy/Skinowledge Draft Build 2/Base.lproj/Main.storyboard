@@ -631,9 +631,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNF-2v-dnn">
-                                <rect key="frame" x="183" y="588" width="49" height="30"/>
+                                <rect key="frame" x="144" y="588" width="127" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
+                                <state key="normal" title="Submit to Memory"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VCz-L5-NPp"/>
@@ -999,6 +999,125 @@
             </objects>
             <point key="canvasLocation" x="768" y="-846"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="7ta-OW-twH">
+            <objects>
+                <viewController id="kb9-xp-sQd" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zua-qE-bCc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4fs-S0-hpr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQ8-cx-dbR">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <state key="normal" title="Which store?">
+                                            <color key="titleColor" systemColor="systemYellowColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectionSecond:" destination="kb9-xp-sQd" eventType="touchUpInside" id="4my-CB-9vP"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Us-Ux-mIj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Glow Recipe">
+                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="kb9-xp-sQd" eventType="touchUpInside" id="Zhx-45-za5"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hg-vv-I84">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Ulta">
+                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="kb9-xp-sQd" eventType="touchUpInside" id="mxI-Ek-lEu"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="025-Qh-1dL">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Sephora">
+                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="kb9-xp-sQd" eventType="touchUpInside" id="xcW-8Z-0ZT"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-DU-y7y">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Inkey List">
+                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="kb9-xp-sQd" eventType="touchUpInside" id="REL-Pq-g9O"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9e-Yd-rjX">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Ordinary">
+                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="kb9-xp-sQd" eventType="touchUpInside" id="ahk-bL-yud"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCC-Yj-QUm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Vani Cream">
+                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="kb9-xp-sQd" eventType="touchUpInside" id="CBY-Gk-g2O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Aiq-Uv-TtU"/>
+                                    <constraint firstAttribute="width" constant="414" id="MHT-k9-bFn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wNK-ac-pF0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wNK-ac-pF0" firstAttribute="bottom" secondItem="4fs-S0-hpr" secondAttribute="bottom" constant="424" id="44y-8h-SoE"/>
+                            <constraint firstItem="4fs-S0-hpr" firstAttribute="top" secondItem="wNK-ac-pF0" secondAttribute="top" id="gI6-Gx-Fue"/>
+                            <constraint firstItem="4fs-S0-hpr" firstAttribute="leading" secondItem="wNK-ac-pF0" secondAttribute="leading" id="lmU-Ob-Ord"/>
+                            <constraint firstItem="wNK-ac-pF0" firstAttribute="trailing" secondItem="4fs-S0-hpr" secondAttribute="trailing" id="soD-AY-mSe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hDD-JW-RLw"/>
+                    <connections>
+                        <outlet property="secondSelection" destination="UQ8-cx-dbR" id="qmz-ox-Y2t"/>
+                        <outletCollection property="secondCollection" destination="0Us-Ux-mIj" collectionClass="NSMutableArray" id="URT-0C-52n"/>
+                        <outletCollection property="secondCollection" destination="8Hg-vv-I84" collectionClass="NSMutableArray" id="zYo-td-C6D"/>
+                        <outletCollection property="secondCollection" destination="025-Qh-1dL" collectionClass="NSMutableArray" id="L6T-zr-Yc2"/>
+                        <outletCollection property="secondCollection" destination="qTm-DU-y7y" collectionClass="NSMutableArray" id="3JG-iu-TpG"/>
+                        <outletCollection property="secondCollection" destination="F9e-Yd-rjX" collectionClass="NSMutableArray" id="2lX-yX-9Y0"/>
+                        <outletCollection property="secondCollection" destination="tCC-Yj-QUm" collectionClass="NSMutableArray" id="kqt-W3-r3O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzM-We-Cio" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2282.608695652174" y="-891.03260869565224"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="nG6-Zb-6xY"/>
@@ -1015,6 +1134,9 @@
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

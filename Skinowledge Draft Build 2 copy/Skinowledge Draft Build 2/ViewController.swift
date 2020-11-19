@@ -380,7 +380,24 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         UIApplication.shared.open(url)
     }
     
+/*    @IBOutlet var secondCollection: [UIButton]!
+    
+    
+    @IBAction func selectionSecond(_ sender: UIButton) {
+        
+        buttonTapped.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations:{
+            button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    
+    @IBOutlet var buttonTapped: [UIButton]!*/
+    
 }
+
+
 
 
 
