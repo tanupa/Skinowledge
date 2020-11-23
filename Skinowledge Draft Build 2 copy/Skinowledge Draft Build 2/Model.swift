@@ -10,10 +10,12 @@ import Foundation
 import UIKit
 let fileName = "Skin.csv"
 let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
+var profile = [CustomStringConvertible]()
+var issues = [String]()
 class Model{
     var store = ""
     var name = ""
-    var age = "10 YEARS OLD"
+    var age = "10 "
     var skinType = ""
     var gender = ""
     var mainIssue = ""
@@ -21,9 +23,6 @@ class Model{
     var csvText = ""//"Age,Gender,Skin Type\n"
     var subIngredients: [String] = []
     var descriptionResults = ""
-    var profile = [CustomStringConvertible]()
-    var issues = [String]()
-    
     func createCSV(iModel: Model)
     {
         print(path)
