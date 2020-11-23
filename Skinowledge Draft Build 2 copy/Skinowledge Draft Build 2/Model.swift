@@ -8,13 +8,12 @@
 
 import Foundation
 import UIKit
-var profile = [CustomStringConvertible]()
-var issues = [String]()
 let fileName = "Skin.csv"
 let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
 class Model{
+    var store = ""
     var name = ""
-    var age = ""
+    var age = "10 YEARS OLD"
     var skinType = ""
     var gender = ""
     var mainIssue = ""
@@ -22,8 +21,8 @@ class Model{
     var csvText = ""//"Age,Gender,Skin Type\n"
     var subIngredients: [String] = []
     var descriptionResults = ""
-}
-extension Model{
+    var profile = [CustomStringConvertible]()
+    var issues = [String]()
     
     func createCSV(iModel: Model)
     {
@@ -124,6 +123,9 @@ extension Model{
             print("Failed to create file")
             print("\(error)")
         }
+        store = "Sephora"
+        profile.append(store)
+        print(profile)
      }
     
     func setInfo(iModel: Model)
@@ -131,7 +133,6 @@ extension Model{
             print("Profile", profile)
             print("Issues", issues)
             iModel.getIngredients(iModel: iModel)
-    //        print("\(iModel.subIngredients)")
             print("\(iModel.subIssue)","Ingredients", subIngredients)
         }
     

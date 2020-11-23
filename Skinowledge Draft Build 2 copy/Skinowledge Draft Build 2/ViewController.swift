@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelegate, UITextFieldDelegate {
-    
 
     // removed all the UIDataPicker code
     
@@ -21,6 +20,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
     }
     
@@ -28,7 +28,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         super.didReceiveMemoryWarning()
     }
     
-    var iModel = Model()
+    var myModel = Model()
     
     @IBOutlet weak var getStartedButton: UIButton!
     
@@ -55,8 +55,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     
     @IBAction func updateGender(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
-        iModel.gender = titleValueString
-        print(iModel.gender)
+        myModel.gender = titleValueString
+        print(myModel.gender)
     }
      
     /**
@@ -65,19 +65,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     @IBOutlet weak var selectedAge: UILabel!
     
     @IBAction func ageTeens(_ sender: Any) {
-        iModel.age = "13-18"
-        print(iModel.age)
+        myModel.age = "13-18"
+        print(myModel.age)
         
     }
     
     @IBAction func ageYA(_ sender: Any) {
-        iModel.age = "18-30"
-        print(iModel.age)
+        myModel.age = "18-30"
+        if let text = ageLabel?.text {
+            ageLabel.text = myModel.age + "YEARS"
+        }
+        print(myModel.age)
+        print(ageLabel.text)
     }
     
     @IBAction func ageAdults(_ sender: Any) {
-        iModel.age = "30+"
-        print(iModel.age)
+        myModel.age = "30+"
+        print(myModel.age)
     }
     
     /**
@@ -85,13 +89,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
      */
     @IBAction func skinType(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
-        iModel.skinType = titleValueString
-        print(iModel.skinType)
+        myModel.skinType = titleValueString
+        print(myModel.skinType)
     }
 
     
     @IBAction func Submit(_ sender: Any) {
-        iModel.createCSV(iModel: iModel)
+        myModel.createCSV(iModel: myModel)
     }
     
     /**These funcs below will change the color of the button to green when pressed, and regular color when delesected
@@ -268,17 +272,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     
     @IBAction func issue(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
-        iModel.mainIssue = titleValueString
-        print(iModel.mainIssue)
-        iModel.addSkinIssue(iModel: iModel)
+        myModel.mainIssue = titleValueString
+        print(myModel.mainIssue)
+        myModel.addSkinIssue(iModel: myModel)
     }
     
     // Subissue: accepts all subissues from all main issues
     @IBAction func subIssue(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
-        iModel.subIssue = titleValueString
-        print(iModel.subIssue)
-        iModel.addSubIssue(iModel: iModel)
+        myModel.subIssue = titleValueString
+        print(myModel.subIssue)
+        myModel.addSubIssue(iModel: myModel)
 //        iModel.addSkinIssue(issue: iModel.subIssue)
     }
     
@@ -379,6 +383,39 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         guard let url = URL(string: "https://www.amazon.com/Vanicream-Gentle-Cleanser-sensitive-Dispenser/dp/B00QY1XZ4W") else { return }
         UIApplication.shared.open(url)
     }
+
+    @IBOutlet weak var ageLabel: UILabel!
+
+    @IBOutlet weak var sexLabel: UILabel!
+
+    @IBOutlet weak var mainIssueLabel: UILabel!
+
+    @IBOutlet weak var subIssueLabel: UILabel!
+
+    @IBOutlet weak var mainIssueDescriptionLabel: UILabel!
+    
+    
+    // Can now update upon viewing the screen
+    // however it now updates everytime a screen is nav'd to
+    func updateProfile(iModel: Model)
+    {
+        //iModel.gender = "female"
+        
+        //print("Gender: " + "\(iModel.gender)")
+       
+        // this works!
+      //  print(ageLabel?.text!)
+      //  print(ageLabel?.text)
+        if let text = sexLabel?.text {
+            sexLabel.text = "\(myModel.gender) GENDER"
+        }
+        if let text = ageLabel?.text {
+            ageLabel.text = myModel.age + "YEARS"
+        }
+        mainIssueLabel?.text = "main issue:   \(myModel.mainIssue)"
+        subIssueLabel?.text = "sub-issue:   \(myModel.subIssue)"
+        print(myModel.age + "dogsdogsdogs")
+    }
     
 /*    @IBOutlet var secondCollection: [UIButton]!
     
@@ -395,9 +432,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     
     @IBOutlet var buttonTapped: [UIButton]!*/
     
+
+
+    @IBAction func refreshProfile(_ sender: Any) {
+        self.updateProfile(iModel: myModel)
+        
+    }
+    
 }
-
-
-
-
 
