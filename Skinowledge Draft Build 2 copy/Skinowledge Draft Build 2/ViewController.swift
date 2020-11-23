@@ -76,7 +76,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
             ageLabel.text = myModel.age + "YEARS"
         }
         print(myModel.age)
-        print(ageLabel.text)
     }
     
     @IBAction func ageAdults(_ sender: Any) {
@@ -107,12 +106,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         if !male.isSelected {
             male.isSelected = true
             male.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            male.backgroundColor = UIColor.green
+            //male.backgroundColor = UIColor.systemYellow
         }
         else {
             male.isSelected = false
-            male.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            male.backgroundColor = UIColor.systemBackground
+            male.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+            male.backgroundColor = UIColor.clear
         }
         //Male.tintColor = UIColor.green
     }
@@ -124,12 +123,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         if !female.isSelected {
             female.isSelected = true
             female.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            female.backgroundColor = UIColor.green
+            //female.backgroundColor = UIColor.systemYellow
         }
         else {
             female.isSelected = false
-            female.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            female.backgroundColor = UIColor.systemBackground
+            female.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+            female.backgroundColor = UIColor.clear
         }
         //Female.tintColor = UIColor.green
     }
@@ -142,12 +141,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         if !teensButton.isSelected {
             teensButton.isSelected = true
             teensButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            teensButton.backgroundColor = UIColor.green
+            //teensButton.backgroundColor = UIColor.systemYellow
         }
         else {
             teensButton.isSelected = false
             teensButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
-            teensButton.backgroundColor = UIColor.systemBackground
+            teensButton.backgroundColor = UIColor.clear
         }
     }
     
@@ -159,12 +158,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         if !youngAdultsButton.isSelected {
             youngAdultsButton.isSelected = true
             youngAdultsButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            youngAdultsButton.backgroundColor = UIColor.green
+            //youngAdultsButton.backgroundColor = UIColor.systemYellow
         }
         else {
             youngAdultsButton.isSelected = false
             youngAdultsButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
-            youngAdultsButton.backgroundColor = UIColor.systemBackground
+            youngAdultsButton.backgroundColor = UIColor.clear
         }
     }
     
@@ -175,12 +174,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         if !adultsButton.isSelected {
             adultsButton.isSelected = true
             adultsButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            adultsButton.backgroundColor = UIColor.green
+            //adultsButton.backgroundColor = UIColor.systemYellow
         }
         else {
             adultsButton.isSelected = false
             adultsButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
-            adultsButton.backgroundColor = UIColor.systemBackground
+            adultsButton.backgroundColor = UIColor.clear
         }
     }
     
@@ -192,12 +191,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         if !dryButton.isSelected {
             dryButton.isSelected = true
             dryButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            dryButton.backgroundColor = UIColor.green
+            //dryButton.backgroundColor = UIColor.systemYellow
         }
         else {
             dryButton.isSelected = false
             dryButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
-            dryButton.backgroundColor = UIColor.systemBackground
+            dryButton.backgroundColor = UIColor.clear
         }
     
     }
@@ -210,12 +209,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         if !oilButton.isSelected {
             oilButton.isSelected = true
             oilButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            oilButton.backgroundColor = UIColor.green
+            //oilButton.backgroundColor = UIColor.systemYellow
         }
         else {
             oilButton.isSelected = false
             oilButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
-            oilButton.backgroundColor = UIColor.systemBackground
+            oilButton.backgroundColor = UIColor.clear
         }
     }
 
@@ -227,12 +226,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         if !combinationButton.isSelected {
             combinationButton.isSelected = true
             combinationButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            combinationButton.backgroundColor = UIColor.green
+            //combinationButton.backgroundColor = UIColor.systemYellow
         }
         else {
             combinationButton.isSelected = false
             combinationButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
-            combinationButton.backgroundColor = UIColor.systemBackground
+            combinationButton.backgroundColor = UIColor.clear
         }
     }
     
@@ -244,12 +243,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         if !sensitiveButton.isSelected {
             sensitiveButton.isSelected = true
             sensitiveButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            sensitiveButton.backgroundColor = UIColor.green
+            //sensitiveButton.backgroundColor = UIColor.systemYellow
         }
         else {
             sensitiveButton.isSelected = false
             sensitiveButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
-            sensitiveButton.backgroundColor = UIColor.systemBackground
+            sensitiveButton.backgroundColor = UIColor.clear
         }
     }
     
@@ -261,12 +260,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         if !submitButton.isSelected {
             submitButton.isSelected = true
             submitButton.setTitleColor(UIColor.white, for: UIControl.State.normal)
-            submitButton.backgroundColor = UIColor.green
+            //submitButton.backgroundColor = UIColor.systemYellow
         }
         else {
             submitButton.isSelected = false
             submitButton.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
-            submitButton.backgroundColor = UIColor.systemBackground
+            submitButton.backgroundColor = UIColor.clear
         }
     }
     
