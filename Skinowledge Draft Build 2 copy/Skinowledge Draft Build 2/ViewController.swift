@@ -7,6 +7,12 @@
 
 import UIKit
 
+extension UIColor {
+
+    static let myCustomColor = UIColor(red: 40, green: 69, blue: 122, alpha: 1)
+
+}
+
 class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelegate, UITextFieldDelegate {
 
     // removed all the UIDataPicker code
@@ -52,6 +58,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     
     @IBOutlet weak var submitButton: UIButton!
     
+    /**
+                Consolidated gender assignment functions into one function
+         */
     
     @IBAction func updateGender(_ sender: UIButton) {
         let titleValueString = sender.currentTitle!
@@ -59,9 +68,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         print(myModel.gender)
     }
      
-    /**
-            Consolidated gender assignment functions into one function
-     */
+    
     @IBOutlet weak var selectedAge: UILabel!
     
     @IBAction func ageTeens(_ sender: Any) {
@@ -394,8 +401,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     @IBOutlet weak var mainIssueDescriptionLabel: UILabel!
     
     
-    // Can now update upon viewing the screen
-    // however it now updates everytime a screen is nav'd to
     func updateProfile(iModel: Model)
     {
         //iModel.gender = "female"
@@ -405,12 +410,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
         // this works!
       //  print(ageLabel?.text!)
       //  print(ageLabel?.text)
-        if let text = sexLabel?.text {
+     //   if let text = sexLabel?.text {
             sexLabel.text = "\(myModel.gender) GENDER"
-        }
-        if let text = ageLabel?.text {
+     //   }
+     //   if let text = ageLabel?.text {
             ageLabel.text = myModel.age + "YEARS"
-        }
+     //   }
         mainIssueLabel?.text = "main issue:   \(myModel.mainIssue)"
         subIssueLabel?.text = "sub-issue:   \(myModel.subIssue)"
         print(myModel.age + "dogsdogsdogs")
@@ -433,8 +438,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     
 
 
-    @IBAction func refreshProfile(_ sender: Any) {
-        self.updateProfile(iModel: myModel)
+    @IBAction func refreshProfile(_ sender: UIButton) {
+        updateProfile(iModel: myModel)
         
     }
     

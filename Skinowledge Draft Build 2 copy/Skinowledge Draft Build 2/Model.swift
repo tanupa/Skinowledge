@@ -13,6 +13,7 @@ let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent
 var profile = [CustomStringConvertible]()
 var issues = [String]()
 class Model{
+    
     var store = ""
     var name = ""
     var age = "10 "
@@ -23,6 +24,7 @@ class Model{
     var csvText = ""//"Age,Gender,Skin Type\n"
     var subIngredients: [String] = []
     var descriptionResults = ""
+    
     func createCSV(iModel: Model)
     {
         print(path)

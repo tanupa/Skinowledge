@@ -48,51 +48,6 @@
             <point key="canvasLocation" x="-2410.144927536232" y="91.304347826086968"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="flO-BG-HAk">
-            <objects>
-                <viewController id="n9j-82-Zmb" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gnl-pw-Jyf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1OC-Oz-yT8" userLabel="scrollView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="537"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="JqF-p0-dGz" userLabel="pageControl">
-                                        <rect key="frame" x="146" y="452" width="123" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <color key="currentPageIndicatorTintColor" systemColor="systemBackgroundColor"/>
-                                        <connections>
-                                            <action selector="pageControl:" destination="O5O-Vb-p34" eventType="valueChanged" id="K2v-Fi-Fik"/>
-                                        </connections>
-                                    </pageControl>
-                                </subviews>
-                                <viewLayoutGuide key="contentLayoutGuide" id="zKi-aZ-Yi2"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="Kr9-Eg-p5k"/>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxZ-oC-FbD" userLabel="start">
-                                <rect key="frame" x="167" y="572" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Get Started"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="99G-FK-1yM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="getStartedButton" destination="cxZ-oC-FbD" id="pOZ-mn-ORP"/>
-                        <outlet property="pageControl" destination="JqF-p0-dGz" id="dWw-37-oXg"/>
-                        <outlet property="scrollView" destination="1OC-Oz-yT8" id="mcq-7g-Gk3"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dtJ-VB-0FR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="O5O-Vb-p34" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="-3110" y="876"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Skinowledge_Draft_Build_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,8 +62,9 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74c-dZ-mYT">
                                 <rect key="frame" x="62" y="161" width="33" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Male">
-                                    <color key="titleColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.16495490069999999" green="0.27401238680000001" blue="0.48208415510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonColorChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rva-BT-n1L"/>
@@ -118,6 +74,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGx-R2-dfw">
                                 <rect key="frame" x="145" y="161" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Female">
                                     <color key="titleColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -150,6 +107,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPG-g8-xY7">
                                 <rect key="frame" x="62" y="248" width="147" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Teens (13-18)">
                                     <color key="titleColor" red="0.16702703759110143" green="0.28081444196427197" blue="0.55229922279792754" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -161,6 +119,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x74-GP-dlq">
                                 <rect key="frame" x="62" y="280" width="147" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Young Adults (18-30)">
                                     <color key="titleColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -172,6 +131,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYc-bO-isP">
                                 <rect key="frame" x="62" y="312" width="147" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Adults (30+)">
                                     <color key="titleColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -183,6 +143,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wot-gI-lQr">
                                 <rect key="frame" x="62" y="417" width="147" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Dry">
                                     <color key="titleColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -194,6 +155,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKC-vW-pne">
                                 <rect key="frame" x="62" y="455" width="147" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Oily">
                                     <color key="titleColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -205,6 +167,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBu-6N-pje">
                                 <rect key="frame" x="62" y="493" width="147" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Combination">
                                     <color key="titleColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -216,6 +179,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsG-I5-kVb">
                                 <rect key="frame" x="62" y="531" width="147" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Sensitive">
                                     <color key="titleColor" red="0.14906832580000001" green="0.25062133240000001" blue="0.49291612689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -273,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1455.072463768116" y="91.304347826086968"/>
+            <point key="canvasLocation" x="-1528" y="90"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Aun-0z-hXm">
@@ -381,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I8y-tK-tLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688.40579710144937" y="800.54347826086962"/>
+            <point key="canvasLocation" x="-1978" y="-642"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="scF-tZ-hKe">
@@ -459,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnS-gx-vOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76.811594202898561" y="969.29347826086962"/>
+            <point key="canvasLocation" x="1313" y="346"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Oma-RH-FNi">
@@ -508,7 +472,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJN-AZ-BzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953.62318840579712" y="790.76086956521749"/>
+            <point key="canvasLocation" x="2035" y="346"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LTE-v8-1Ui">
@@ -583,25 +547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0f-Gb-y7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1713.0434782608697" y="800.54347826086962"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="f9N-HM-hoR">
-            <objects>
-                <tabBarController hidesBottomBarWhenPushed="YES" id="Xbf-hi-2gM" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rJ1-iW-gRf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="V3A-tu-hv3" kind="relationship" relationship="viewControllers" id="3S8-5a-UqN"/>
-                        <segue destination="41u-P0-a54" kind="relationship" relationship="viewControllers" id="ctG-Y7-cSr"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ICI-02-47Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-719" y="-645"/>
+            <point key="canvasLocation" x="1314" y="-744"/>
         </scene>
         <!--Search-->
         <scene sceneID="If3-bN-TNT">
@@ -698,7 +644,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5e-zs-nK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="150.72463768115944" y="75"/>
+            <point key="canvasLocation" x="-757" y="90"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UwV-k1-Uro">
@@ -827,7 +773,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZF-jM-rRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="-1663"/>
+            <point key="canvasLocation" x="2035" y="-744"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="X2O-0b-FQK">
@@ -984,7 +930,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOE-Mu-tKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1211.5942028985507" y="75"/>
+            <point key="canvasLocation" x="541" y="346"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="46h-5p-l9Y">
@@ -1091,7 +1037,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fU6-Bl-UGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="2vq-Hx-aft" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="766.66666666666674" y="-846.19565217391312"/>
+            <point key="canvasLocation" x="542" y="-744"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7ta-OW-twH">
@@ -1210,13 +1156,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzM-We-Cio" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2282.608695652174" y="-891.03260869565224"/>
+            <point key="canvasLocation" x="2761" y="-170"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="nG6-Zb-6xY"/>
-        <segue reference="cLA-dj-Uw5"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Final Design iOS" width="1080" height="1920"/>
         <image name="Final Design iOS (1)" width="1080" height="1920"/>
