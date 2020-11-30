@@ -438,10 +438,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelega
     
 
 
-    @IBAction func refreshProfile(_ sender: UIButton) {
+/*    @IBAction func refreshProfile(_ sender: UIButton) {
         updateProfile(iModel: myModel)
         
-    }
+    }*/
     
 }
 
