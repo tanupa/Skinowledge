@@ -81,7 +81,7 @@
 		D588C9952515C9B800990DBF = {
 			isa = PBXGroup;
 			children = (
-				D588C9A02515C9B800990DBF /* Skinowledge Draft Build 2 */,
+				D588C9A02515C9B800990DBF /* Skinowledge */,
 				D588C99F2515C9B800990DBF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,7 +96,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D588C9A02515C9B800990DBF /* Skinowledge Draft Build 2 */ = {
+		D588C9A02515C9B800990DBF /* Skinowledge */ = {
 			isa = PBXGroup;
 			children = (
 				D588C9A12515C9B800990DBF /* AppDelegate.swift */,
@@ -111,7 +111,7 @@
 				EBFF51EA255488AB00021F53 /* DictionaryTest */,
 				EB05D104255A0FC600F89D24 /* Results.swift */,
 			);
-			path = "Skinowledge Draft Build 2";
+			path = Skinowledge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +195,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D588C9992515C9B800990DBF /* Build configuration list for PBXProject "Skinowledge Draft Build 2" */;
+			buildConfigurationList = D588C9992515C9B800990DBF /* Build configuration list for PBXProject "Skinowledge" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -543,7 +543,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D588C9992515C9B800990DBF /* Build configuration list for PBXProject "Skinowledge Draft Build 2" */ = {
+		D588C9992515C9B800990DBF /* Build configuration list for PBXProject "Skinowledge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D588C9C92515C9BE00990DBF /* Debug */,

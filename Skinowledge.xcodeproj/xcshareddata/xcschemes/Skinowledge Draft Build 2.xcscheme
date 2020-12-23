@@ -17,7 +17,7 @@
                BlueprintIdentifier = "D588C99D2515C9B800990DBF"
                BuildableName = "Skinowledge Draft Build 2.app"
                BlueprintName = "Skinowledge Draft Build 2"
-               ReferencedContainer = "container:Skinowledge Draft Build 2.xcodeproj">
+               ReferencedContainer = "container:Skinowledge.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "D588C99D2515C9B800990DBF"
             BuildableName = "Skinowledge Draft Build 2.app"
             BlueprintName = "Skinowledge Draft Build 2"
-            ReferencedContainer = "container:Skinowledge Draft Build 2.xcodeproj">
+            ReferencedContainer = "container:Skinowledge.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "D588C99D2515C9B800990DBF"
             BuildableName = "Skinowledge Draft Build 2.app"
             BlueprintName = "Skinowledge Draft Build 2"
-            ReferencedContainer = "container:Skinowledge Draft Build 2.xcodeproj">
+            ReferencedContainer = "container:Skinowledge.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

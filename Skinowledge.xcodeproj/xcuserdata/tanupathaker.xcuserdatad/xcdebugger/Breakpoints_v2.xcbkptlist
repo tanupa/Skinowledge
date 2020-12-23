@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "96D7CDD5-06FC-412C-811A-4C19672CCD24"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Skinowledge Draft Build 2/Model.swift"
@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
-            landmarkName = "getProducts(ingredients:)"
+            landmarkName = "addSubIssue(iModel:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "894B9663-7053-4FFF-BBFE-30078B85E512"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Skinowledge Draft Build 2/Model.swift"
@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
             endingLineNumber = "108"
-            landmarkName = "getProducts(ingredients:)"
+            landmarkName = "addSubIssue(iModel:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
